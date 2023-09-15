@@ -1,14 +1,14 @@
 import React from 'react';
-import Logo from '../assets/boss-logo.png';
+import Logo from '../assets/boss-logo-black.png';
 
 const Navbar = () => {
   return (
-    <div className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#03001C] z-10">
+    <div className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#fff] text-black z-10">
       <div>
         <img
           src={Logo}
           alt="Bosscultr Logo"
-          style={{ width: '50px' }}
+          style={{ height: '60px' }}
           className="cursor-pointer"
         />
       </div>
