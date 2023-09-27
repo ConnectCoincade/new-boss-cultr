@@ -1,0 +1,59 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 100px; */
+    margin: 0 auto;
+}
+.faqs{
+    color: #f74f58;
+    font-family: sans-serif;
+    margin-left:100px ;
+}
+.faqs-heading{
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #f74f58;
+    
+}
+.faqs-facts{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 900;
+   
+}
+.miss-button{
+    padding: 10px 70px;
+    border: 3px solid #f74f58;
+    border-radius: 50px;
+    margin-left:100px ;
+}
+.faqs-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 60px;
+    padding: 15px 12px;
+    width: 90%;
+    /* border: 1px solid gray; */
+}
+.faqs-que{
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    border-bottom: 2px solid #f74f58;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+
+}
+.faqs-ans{
+  
+    padding: 10px 10px 0px 30px
+}
+.faqs-que:hover{
+    background-color: #f74f58;
+}

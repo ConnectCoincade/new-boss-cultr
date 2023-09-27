@@ -1,0 +1,15 @@
+.box{
+    border: 5px solid black;
+    margin: 30px;
+}
+.container1{
+    display: flex;
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+}
+.line{
+    width: 90%;
+    border: 5px solid red;
+}

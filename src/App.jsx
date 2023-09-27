@@ -1,21 +1,11 @@
 import './App.css';
-import About from './components/About';
-import Faqs from './components/Faqs';
-import Hero from './components/Hero';
-import Lore from './components/Lore';
-import Navbar from './components/Navbar';
-import Roadmap from './components/Roadmap';
+import Routing from './routes/Routing';
 
 function App() {
   return (
     <>
       <div>
-        <Navbar />
-        <Hero />
-        <Lore />
-        <About />
-        <Roadmap />
-        <Faqs />
+        <Routing/>
       </div>
     </>
   );
