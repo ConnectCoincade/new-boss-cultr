@@ -40,7 +40,7 @@
     transform: scale(1.2);
     z-index: 1;
     background: black;
-    border-color: aqua;
+    border-color: red;
     /* background: re; */
     /* border: 10px solid red; */
 }

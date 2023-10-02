@@ -63,17 +63,17 @@ const About = () => {
     <h2 className='about-heading'>About Bosses</h2>
     <div className='container flex justify-between flex-row  px-6'>
         
-    <div className='box boss1 px-1 m-4 border-4 rounded-xl border-red-50 cursor-pointer'>
+    <div className='box boss1 px-1 m-4 border-4 rounded-xl border-silver-900 cursor-pointer'>
         <img className='image-front' src={BossPicture1} alt="boss" />     
         <img className='image-back' src={BossPictureHover1} alt="bossOnHover"/>
     </div>
 
-    <div className='box boss2 px-1 m-4 border-4 rounded-xl border-red-50 cursor-pointer'>
+    <div className='box boss2 px-1 m-4 border-4 rounded-xl border-silver-900 cursor-pointer'>
     <img className='image-front'  src={BossPicture2} alt="boss" />
     <img className='image-back' src={BossPictureHover2} alt="bossOnHover"/>
     </div>
     
-    <div className='box boss3 px-1 m-4 border-4 rounded-xl border-red-50 cursor-pointer'>
+    <div className='box boss3 px-1 m-4 border-4 rounded-xl border-silver-900 cursor-pointer'>
         <img className='image-front' src={BossPicture3} alt="boss" />
         <img className='image-back' src={BossPictureHover3} alt="bossOnHover"/>
     </div>
