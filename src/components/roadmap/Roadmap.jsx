@@ -1,28 +1,30 @@
 import React from 'react';
-import {imageObj} from '../../constant'
+import {mediaDataObj} from '../../constant'
+import './roadmap.css'
 
 const Roadmap = () => {
-  const {backcard,kingcard,table} = imageObj
+  const {backcard,kingcard,table} = mediaDataObj
   return( 
   <>
-   <div>
-    <h1>Roadmap</h1>
-    <div>
-    <img src={table} alt="table" />
+   <div className='stick'>
+    <h3 className='roadmap-heading'>Roadmap</h3>
+    <div className='stick'>
+    <img className='w-full' src={table} alt="table" />
     </div>
-    <div style={{display:'flex', justifyContent:'space-between'}}>
-      <>
-      <img src={kingcard} alt='card' />
-      </>
-      <>
-      <img src={backcard} alt='card' />
-      </>
-      <>
-      <img src={backcard} alt='card' />
-      </>
-      <>
-      <img src={backcard} alt='card' />
-      </>
+    <div className='image-card flex justify-evenly relative'>
+      <div className='cursor-pointer'>
+      <img className='card' src={kingcard} alt='card' />
+      {/* <img className='card' src={backcard} alt='card' /> */}
+      </div>
+      <div className='cursor-pointer'>
+      <img className='card' src={backcard} alt='card' />
+      </div>
+      <div className='cursor-pointer'>
+      <img className='card' src={backcard} alt='card' />
+      </div>
+      <div className='cursor-pointer'>
+      <img className='card' src={backcard} alt='card' />
+      </div>
 
     </div>
    </div>

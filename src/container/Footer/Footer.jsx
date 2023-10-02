@@ -1,11 +1,11 @@
 import React from "react";
-import { imageObj } from "../../constant";
+import { mediaDataObj } from "../../constant";
 // import discord from "../../assets/discord.png";
 // import twiter from "../../assets/twiter.png";
 import "./Footer.css";
 // import { isMobile } from "react-device-detect";
 function Footer() {
-  const {logo } = imageObj;
+  const {logo } = mediaDataObj;
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

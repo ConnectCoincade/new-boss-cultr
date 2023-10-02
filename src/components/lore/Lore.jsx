@@ -1,12 +1,14 @@
 import React, { useRef, useState, useEffect} from 'react';
-import { imageObj } from '../../constant';
+import { mediaDataObj } from '../../constant';
 import { TweenMax,Power1 } from 'gsap';
-import spark from '../../assets/spark.png'
+
 
 const Lore = () => {
-  const {bossman, bossMan} = imageObj;
+  const {bossManImg, bossManVideo} = mediaDataObj;
   const videoRef = useRef(null);
-
+  const [muteMode, setMuteMode] = useState(
+    () => JSON.parse(sessionStorage.getItem("isMute")) ?? true
+  );
   // useEffect(()=>{
   //   const handleScroll = () =>{
   //     const video =  videoRef.current;
@@ -56,18 +58,22 @@ const Lore = () => {
 
   return <div className="container">
     <div className='video-container'>
+
       <div>
-      <img src={bossMan} alt='bossMan' />
-      </div>
-      <div>
-     <video id='video' style={{}} ref={videoRef} >
-      <source src={bossman} type='video/mp4' />
+     <video 
+        loop
+        className='w-full'
+        ref={videoRef}
+        autoPlay={true}
+        muted={muteMode}
+        controlsList="nodownload"
+        playsInline={true}
+        disablePictureInPicture={true}
+        controls={false}>
+      <source src={bossManVideo} type='video/mp4' />
       </video>
       </div>
     </div>
-      <div>
-        <img src={spark} alt="" />
-      </div>
     </div>;
 };
 

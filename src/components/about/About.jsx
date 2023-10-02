@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import './about.css';
 import {gsap} from 'gsap';
-import { imageObj } from '../../constant';
+import { mediaDataObj } from '../../constant';
 const About = () => {
-    const {boss1,boss2} = imageObj
+    const {BossPicture1,BossPicture2,BossPicture3,BossPictureHover1,BossPictureHover2,BossPictureHover3} = mediaDataObj
     const tl = gsap.timeline();
     // let main = useRef(null);
     let box1 = useRef(null);
@@ -60,50 +60,25 @@ const About = () => {
 
   return (
     <>
-{/* <div className="main" ref={el=>main = el}>
-        <div className="container1"  >
-            <div className="box box-top" id="box1" ref={el=>box1 = el}>
-                <h4>201</h4>   
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet neque placeat eius aspernatur cupiditate. Quis recusandae eum quae velit nulla, earum voluptas eaque harum et modi? Fugit, ab sit. Illum quasi recusandae iure est debitis!</p>
-           </div>
-           <div className="box box-top" id="box3" ref={el=>box3 = el}>
-               <h4>203</h4>   
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, accusantium possimus necessitatibus expedita aspernatur voluptatum. Facere quos dolorem et eos cumque magnam dolore dolor odio maxime numquam, commodi quo officia.</p>
-           </div>
-           <div className="box box-top" id="box5" ref={el=>box5 = el}>
-               <h4>205</h4>   
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro velit iure, architecto odio quae asperiores corporis? Nemo aperiam nisi maxime libero modi, et omnis officia, eligendi inventore porro beatae amet.</p>
-            </div>
-        </div>
-         <hr className="line"/>
-        <div className="container2">
-            <div className="box box-bottom" id="box2" ref={el=>box2 = el}>
-                <h4>202</h4> 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officia ad ipsam blanditiis quisquam alias sit nemo cupiditate aliquam et praesentium, molestias corporis obcaecati harum modi maiores nulla? Obcaecati, nulla!</p>  
-            </div>
-            
-            
-            <div className="box box-bottom" id="box4" ref={el=>box4 = el}>
-                <h4>204</h4>   
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro velit iure, architecto odio quae asperiores corporis? Nemo aperiam nisi maxime libero modi, et omnis officia, eligendi inventore porro beatae amet.</p>
-            </div>
-        </div>    
-
-    </div> */}
-    <h2>About Bosses</h2>
-    <div>
-        <img src={boss1} alt="boss" />
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ab facilis officiis minus atque consequuntur, repudiandae porro vero aliquid iusto. Laboriosam tempora quidem, fugiat optio facilis iusto corrupti omnis hic?</p>
-    </div>
-    <div>
-    <img style={{width:'38%'}} src={boss2} alt="boss" />
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ipsam quod soluta totam quis nemo quibusdam error, beatae illum quos vitae velit pariatur tenetur quasi, at voluptas maxime sit fuga?</p>
-    </div>
-    <div>
-        <img src={boss1} alt="boss" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero incidunt velit corrupti eius soluta tempore officiis itaque molestias eveniet, aspernatur voluptatum consequatur unde dolores. Repellat cumque laboriosam iste quidem vitae?</p>
+    <h2 className='about-heading'>About Bosses</h2>
+    <div className='container flex justify-between flex-row  px-6'>
+        
+    <div className='box boss1 px-1 m-4 border-4 rounded-xl border-red-50 cursor-pointer'>
+        <img className='image-front' src={BossPicture1} alt="boss" />     
+        <img className='image-back' src={BossPictureHover1} alt="bossOnHover"/>
     </div>
 
+    <div className='box boss2 px-1 m-4 border-4 rounded-xl border-red-50 cursor-pointer'>
+    <img className='image-front'  src={BossPicture2} alt="boss" />
+    <img className='image-back' src={BossPictureHover2} alt="bossOnHover"/>
+    </div>
+    
+    <div className='box boss3 px-1 m-4 border-4 rounded-xl border-red-50 cursor-pointer'>
+        <img className='image-front' src={BossPicture3} alt="boss" />
+        <img className='image-back' src={BossPictureHover3} alt="bossOnHover"/>
+    </div>
+    
+    </div>
    </>
 
     )

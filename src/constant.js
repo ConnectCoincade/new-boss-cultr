@@ -5,12 +5,26 @@ import backcard from './assets/back-card.jpg'
 import kingcard from './assets/king-card.jpg';
 import hero from './assets/website man.mp4';
 import title from './assets/lifestyle text.mp4';
-import bossman from './assets/slowed.mp4';
 import Logo from './assets/boss-logo-black.png';
 import logo from "./assets/logo.png";
-import bossMan from './assets/bossMan.png';
+import bossManImg from './assets/bossMan.png';
+import bossManVideo from './assets/test1.mp4';
+import BossPicture1 from './assets/Boss1.png';
+import BossPicture2 from './assets/Boss2.png'
+import BossPicture3 from './assets/Boss3.png'
+import BossPictureHover1 from './assets/Boss1-hover.png'
+import BossPictureHover2 from './assets/Boss2-hover.png'
+import BossPictureHover3 from './assets/Boss3-hover.png';
+import longVideo from './assets/long.mp4';
 
-export const imageObj = {
+export const mediaDataObj = {
+    BossPicture1,
+    BossPicture2,
+    BossPicture3,
+    BossPictureHover1,
+    BossPictureHover2,
+    BossPictureHover3,
+    bossManVideo,
     boss1,
     boss2,
     table,
@@ -18,10 +32,11 @@ export const imageObj = {
     kingcard,
     hero,
     title,
-    bossman,
+    bossManVideo,
     Logo,
     logo,
-    bossMan,
+    bossManImg,
+    longVideo,
     faqs: [
            {que :"What are NFTs and how do they work?",ans:"NFTs, or non-fungible tokens, are a type of digital asset that represent ownership of a unique item or piece of content, such as a piece of artwork or music. They are stored on a blockchain, which is a digital ledger that keeps track of all transactions."},
            {que:"How can I purchase one of your NFTs?",ans:"Once it's available, you will be able to purchase our NFTs on Opensea."},

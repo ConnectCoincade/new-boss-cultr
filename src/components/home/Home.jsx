@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Navbar from '../navbar/Navbar';
 import Hero from '../hero/Hero';
 import Lore from '../lore/Lore';
@@ -11,6 +11,13 @@ import Loader from '../../container/Loader/Loader';
 import '../home/home.css'
 const Home = () => {
   const [loading, setLoading] = useState(false);
+  const [refData, setRefData] = useState('')
+
+  const hero = useRef(null);
+  const lore = useRef(null);
+  const about = useRef(null);
+  const roadmap = useRef(null);
+  const faqs = useRef(null);
 
   const handleSkip = () => {
     setLoading(false);
@@ -25,6 +32,41 @@ const Home = () => {
       }, 10000);
     }
   }, [loading]);
+
+  const scrollToSection = (sectionName) => {
+  // Determine the corresponding ref based on the sectionName
+ 
+  let sectionRef;
+  switch (sectionName) {
+    case "hero":
+      sectionRef = hero;
+      console.log("hero");
+    case "lore":
+      sectionRef = lore;
+      break;
+    case "about":
+      sectionRef = about;
+      break;
+    case "roadmap":
+      sectionRef = roadmap;
+      break;
+    case "faqs":
+      sectionRef = faqs;
+      break;
+    default:
+      // Handle cases where the sectionName doesn't match any section
+      sectionRef = hero;
+      return;
+  }
+  
+  if (sectionRef && sectionRef.current) {
+    window.scrollTo({
+      top: sectionRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  }
+}
+ 
   return (
     <>
            <AnimatedCursor
@@ -43,13 +85,25 @@ const Home = () => {
           </div>
         </>
       ) : (<>
-        <Navbar />
-        <Hero />
-        <Lore />
-        <About />
-        <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrdKpxcaq8GbvKrT_TLi5s4DTR4znzmR6SmQ&usqp=CAU'} />
-        <Roadmap />
-        <Faqs />
+        <Navbar scrollToSection={scrollToSection} />
+
+          <section ref={hero} >
+          <Hero  />
+          </section>
+  
+          <section ref={lore}>
+          <Lore />
+          </section>
+        
+          <section ref={about}>
+            <About />
+          </section>
+          <section ref={roadmap}>
+            <Roadmap />
+          </section>
+          <section ref={faqs}>
+            <Faqs />
+          </section>
         <Footer/>
         </> )}
     </>

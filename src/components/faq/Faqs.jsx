@@ -1,9 +1,9 @@
 import React from 'react';
-import { imageObj } from '../../constant';
+import { mediaDataObj } from '../../constant';
 import './faq.css';
 import Accordion from './Accordion';
 const Faqs = () => {
-  const {faqs} = imageObj;
+  const {faqs} = mediaDataObj;
 
   const handleHide = (e) =>{
     console.log(e);
@@ -13,21 +13,13 @@ const Faqs = () => {
   <>
   <section className='container'>
   <div>
-    <h3 className='faqs faqs-heading'>faqs</h3>
+    <h3 className='faqs faqs-heading'>FAQ'S</h3>
   </div>
-  <div>
-    <p className='faqs faqs-facts'>The Facts</p>
-  </div>
-  <div>
-    <p className='faqs faqs-msg'>If you don’t see your question answered below, send us a message.</p>
-  </div>
-  <div>
-    <button className='miss-button'>what did we miss?</button>
-  </div>
+
     <div>
       {faqs.map((data,index)=>{
         return (
-         <Accordion question={data.que} answer={data.ans}  />
+         <Accordion question={data.que} answer={data.ans} key={index} />
           )
       })}
     </div>
