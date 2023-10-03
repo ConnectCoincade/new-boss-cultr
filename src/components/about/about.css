@@ -37,7 +37,7 @@
 }
 .box:hover{
     
-    transform: scale(1.2);
+    transform: scale(1.0);
     z-index: 1;
     background: black;
     border-color: red;
@@ -47,6 +47,6 @@
 .image-front:hover{
     
     opacity: 0;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     /* z-index: ; */
 }

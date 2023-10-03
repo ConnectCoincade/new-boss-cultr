@@ -16,7 +16,7 @@ function Footer() {
 
   return (
     <>
-      <div style={{ background: "#101010" }}>
+      <div className="flex flex-col" style={{ background: "#101010" }}>
         <div className="Footer-Col">
           <img
             src={logo}

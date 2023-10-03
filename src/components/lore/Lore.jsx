@@ -1,10 +1,9 @@
-import React, { useRef, useState, useEffect} from 'react';
-import { mediaDataObj } from '../../constant';
-import { TweenMax,Power1 } from 'gsap';
-
+import React, { useRef, useState, useEffect } from "react";
+import { mediaDataObj } from "../../constant";
+import { TweenMax, Power1 } from "gsap";
 
 const Lore = () => {
-  const {bossManImg, bossManVideo} = mediaDataObj;
+  const { bossManImg, bossManVideo } = mediaDataObj;
   const videoRef = useRef(null);
   const [muteMode, setMuteMode] = useState(
     () => JSON.parse(sessionStorage.getItem("isMute")) ?? true
@@ -56,25 +55,49 @@ const Lore = () => {
   //   };
   // }, [isScrolling]);
 
-  return <div className="container">
-    <div className='video-container'>
+  const registerVideo = (bound, video) => {
+    bound = document.querySelector(bound);
+    video = document.querySelector(video);
+    const scrollVideo = () => {
+      if (video.duration) {
+        const distanceFromTop =
+          window.scrollY + bound.getBoundingClientRect().top;
+        const rawPercentScrolled =
+          (window.scrollY - distanceFromTop) /
+          (bound.scrollHeight - window.innerHeight);
+        const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
-      <div>
-     <video 
-        loop
-        className='w-full'
-        ref={videoRef}
-        autoPlay={true}
-        muted={muteMode}
-        controlsList="nodownload"
-        playsInline={true}
-        disablePictureInPicture={true}
-        controls={false}>
-      <source src={bossManVideo} type='video/mp4' />
-      </video>
+        video.currentTime = video.duration * percentScrolled;
+      }
+      requestAnimationFrame(scrollVideo);
+    };
+    requestAnimationFrame(scrollVideo);
+  };
+
+  useEffect(() => {
+    registerVideo("#bound-two", "#bound-two video");
+  }, []);
+
+  return (
+    <>
+      <div className="video-container">
+        <video
+          loop
+          preload
+          className="w-full"
+          ref={videoRef}
+          autoPlay={true}
+          muted={muteMode}
+          controlsList="nodownload"
+          playsInline={true}
+          disablePictureInPicture={true}
+          controls={false}
+        >
+          <source src={bossManVideo} type="video/mp4" />
+        </video>
       </div>
-    </div>
-    </div>;
+    </>
+  );
 };
 
 export default Lore;

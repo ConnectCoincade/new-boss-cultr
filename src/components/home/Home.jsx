@@ -9,6 +9,7 @@ import Footer from '../../container/Footer/Footer'
 import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
 import '../home/home.css'
+import Lore2 from '../lore/Lore2';
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [refData, setRefData] = useState('')
@@ -93,6 +94,7 @@ const Home = () => {
   
           <section ref={lore}>
           <Lore />
+          {/* <Lore2/> */}
           </section>
         
           <section ref={about}>

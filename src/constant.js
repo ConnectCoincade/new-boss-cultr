@@ -1,6 +1,6 @@
 import boss1 from './assets/mb1.png';
 import boss2 from './assets/1.png';
-import table from './assets/table.jpg';
+import table from './assets/table.png';
 import backcard from './assets/back-card.jpg'
 import kingcard from './assets/king-card.jpg';
 import hero from './assets/website man.mp4';
@@ -8,7 +8,7 @@ import title from './assets/lifestyle text.mp4';
 import Logo from './assets/boss-logo-black.png';
 import logo from "./assets/logo.png";
 import bossManImg from './assets/bossMan.png';
-import bossManVideo from './assets/test1.mp4';
+import bossManVideo from './assets/BG 1.mp4';
 import BossPicture1 from './assets/Boss1.png';
 import BossPicture2 from './assets/Boss2.png'
 import BossPicture3 from './assets/Boss3.png'
@@ -16,6 +16,7 @@ import BossPictureHover1 from './assets/Boss1-hover.png'
 import BossPictureHover2 from './assets/Boss2-hover.png'
 import BossPictureHover3 from './assets/Boss3-hover.png';
 import longVideo from './assets/long.mp4';
+import closeButton from './assets/close-button.png'
 
 export const mediaDataObj = {
     BossPicture1,
@@ -37,6 +38,7 @@ export const mediaDataObj = {
     logo,
     bossManImg,
     longVideo,
+    closeButton,
     faqs: [
            {que :"What are NFTs and how do they work?",ans:"NFTs, or non-fungible tokens, are a type of digital asset that represent ownership of a unique item or piece of content, such as a piece of artwork or music. They are stored on a blockchain, which is a digital ledger that keeps track of all transactions."},
            {que:"How can I purchase one of your NFTs?",ans:"Once it's available, you will be able to purchase our NFTs on Opensea."},
@@ -47,5 +49,12 @@ export const mediaDataObj = {
            {que:"How can I stay updated about collections and events?",ans:"Don't miss a beat! Keep up with all of our official communications by subscribing to our newsletters. We've centralized all of our updates in one place to make sure you have the most current information. Sign up at http://marsrejects.beehiiv.com and never miss a thing!"},
            {que:"What are the benefits of being a holder?",ans:"Be a part of shaping the story and unlock exclusive perks by supporting our project. You'll gain additional benefits through our roadmap activations, enjoy savings on items in our online store (launching soon), and have early access to future collections. Owning a Mars Rejects NFT grants access to exclusive previews, sneak peeks, pre-orders, and giveaways of upcoming work by Torrado.nyc in digital and physical forms."},
            {que:"Has AI been used in the creation of the art?", ans:"We are committed to crafting truly unique and authentic pieces of art. Rest assured, we believe in the power of the human touch, and we never rely on Artificial Intelligence in our creations. Each piece is crafted by hand, guaranteeing one-of-a-kind authenticity."}
-        ]
+        ],
+
+    bossDetails:
+    [
+        {BossPicture:BossPicture1,BossPictureHover:BossPictureHover1,description:"asbasavhjsvahvahvshavshavsvavavhjhavjhavhjavdhjcvdhasvdhvahgdvasd"},
+        {BossPicture:BossPicture2,BossPictureHover:BossPictureHover2,description:"jbakjdabkjdbaskjdbkjsbdkjsbjkdbsjkbdjsbdbskdbskjbdkjsbdkjbskjsbd"},
+        {BossPicture:BossPicture3,BossPictureHover:BossPictureHover3,description:"kjdkjsbdjksbdbsdhvsdvsdvhsvdkhsvdjksjkdvsjdkjsdjbsbdskjbdksjbdjds"},
+    ]    
 }

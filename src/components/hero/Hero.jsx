@@ -9,28 +9,7 @@ const Hero = () => {
     () => JSON.parse(sessionStorage.getItem("isMute")) ?? true
   );
 
-  const registerVideo = (bound, video) => {
-    bound = document.querySelector(bound);
-    video = document.querySelector(video);
-    const scrollVideo = () => {
-      if (video.duration) {
-        const distanceFromTop =
-          window.scrollY + bound.getBoundingClientRect().top;
-        const rawPercentScrolled =
-          (window.scrollY - distanceFromTop) /
-          (bound.scrollHeight - window.innerHeight);
-        const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
-        video.currentTime = video.duration * percentScrolled;
-      }
-      requestAnimationFrame(scrollVideo);
-    };
-    requestAnimationFrame(scrollVideo);
-  };
-
-  useEffect(() => {
-    registerVideo("#bound-two", "#bound-two video");
-  }, []);
 
   // useEffect(() => {
   //   sessionStorage.setItem("isMute", true);
@@ -61,7 +40,7 @@ const Hero = () => {
       <source  src={longVideo} type="video/mp4" /> 
      </video>
      </div>
-     <div id="bound-two" className="scroll-bound">
+     <div>
      <video
      muted 
       >
