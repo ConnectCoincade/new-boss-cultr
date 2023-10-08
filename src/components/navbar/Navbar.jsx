@@ -1,15 +1,21 @@
 import React, {useRef, useState} from 'react';
-import { mediaDataObj } from '../../constant';
+import { mediaDataObj } from '../../data/constant';
 
 const Navbar = (props) => {
   const {Logo} = mediaDataObj;
   const {scrollToSection} = props;
 //  console.log(scrollHandler);
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 
   return (
-    <div className="fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#fff] text-black z-10">
-      <div onClick={()=>scrollToSection("hero")}>
+    <div className="shadow-red-500 fixed w-full h-[50px] flex justify-between items-center px-4 bg-[red] text-black z-10 ">
+      <div  onClick={() => scrollToTop()}>
         <img
           src={Logo}
           alt="Bosscultr Logo"
@@ -20,11 +26,11 @@ const Navbar = (props) => {
       </div>
 
       {/* Menu */}
-      <ul className="hidden lg:flex space-x-5">
-        <li className="cursor-pointer hover:font-bold font-semibold" onClick={()=>scrollToSection("lore")} >Lore</li>
-        <li className="cursor-pointer hover:font-bold font-semibold" onClick={()=>scrollToSection("about")} >About</li>
-        <li className="cursor-pointer hover:font-bold font-semibold" onClick={()=>scrollToSection("roadmap")} >RoadMap</li>
-        <li className="cursor-pointer hover:font-bold font-semibold" onClick={()=>scrollToSection("faqs")} >FAQs</li>
+      <ul className="hidden lg:flex space-x-5 text-red-700">
+        <li className="cursor-pointer font-bold text-gray-900 decoration-red-600  hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection("lore")} >LORE</li>
+        <li className="cursor-pointer font-bold text-gray-900 decoration-red-600  hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection("about")} >ABOUT</li>
+        <li className="cursor-pointer font-bold text-gray-900 decoration-red-600  hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection("roadmap")} >ROADMAP</li>
+        <li className="cursor-pointer font-bold text-gray-900 decoration-red-600  hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection("faqs")} >FAQs</li>
       </ul>
     </div>
   );

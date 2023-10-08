@@ -1,72 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './about.css';
-import {gsap} from 'gsap';
-import { mediaDataObj } from '../../constant';
+// import {gsap} from 'gsap';
+import { mediaDataObj } from '../../data/constant';
 import AboutModal from './AboutModal';
+import { motion } from 'framer-motion';
 const About = () => {
     const {BossPicture1,BossPicture2,BossPicture3,BossPictureHover1,BossPictureHover2,BossPictureHover3, bossDetails} = mediaDataObj
     const tl = gsap.timeline();
     const [open, setOpen] = useState(false);
     const [boss, setBoss] = useState({description:"",picture:""});
-    // let main = useRef(null);
-    // let box1 = useRef(null);
-    // let box2 = useRef(null);
-    // let box3 = useRef(null);
-    // let box4 = useRef(null);
-    // let box5 = useRef(null);
-    // let main = document.querySelector('.main');
    
-
-// useEffect(()=>{
-//     // console.log(main.current);
-//     console.log(main);
-//     gsap.config({
-//             autoSleep: 60,
-//             force3D: false,
-//             nullTargetWarn: false,
-//              trialWarn: false,
-//             units: {left: "%", top: "%", rotation: "rad"}
-//           });
-//     tl.from(main.current,{
-//         x:'-100%',
-//         opacity:1,
-//         ease:"back",
-        
-//     },3)
-//     tl.from(box1.current,{
-//         x:'-100%',
-//         opacity:1,
-//         ease:'back'
-//     });
-//     tl.from(box2,{
-//         y:'100%',
-//         opacity:1,
-//         ease:'back'
-//     });
-//     tl.from(box3,{
-//         y:'-100%',
-//         opacity:1,
-//         ease:'back'
-//     })
-//     tl.from(box4,{
-//         y:'100%',
-//         opacity:1,
-//         ease:'back'
-//     })
-//     tl.from(box5,{
-//         x:'100%',
-//         opacity:1,
-//         ease:'back'
-//     })
-// },[]);
-
-const handleBoss = (description,BossPicture) =>{
+   const handleBoss = (description,BossPicture) =>{
     setOpen(!open);
     setBoss({description:description,picture:BossPicture});
-}
+   }
     
-
-
   return (
     <>
     
@@ -85,9 +33,9 @@ const handleBoss = (description,BossPicture) =>{
            </>)
         })
       }
-              {open &&
+              {/* {open &&
                  <AboutModal open={open} setOpen={setOpen} boss={boss} />
-               }
+               } */}
     
     </div> 
     

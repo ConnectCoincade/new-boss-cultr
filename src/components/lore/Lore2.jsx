@@ -3,7 +3,7 @@ import "./scrollvideo.css";
 import bossLadyLogo from "../../assets/bossLady.png";
 import flipped from "../../assets/finallady.mp4";
 import { BrowserView, MobileView } from "react-device-detect";
-import { mediaDataObj } from "../../constant";
+import { mediaDataObj } from "../../data/constant";
 // import "../home/styles.css";
 // import Imgsequence from "../imgsequence/imgsequence";
 function Lore2() {

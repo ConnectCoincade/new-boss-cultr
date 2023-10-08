@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import { mediaDataObj } from "../../constant";
+import { mediaDataObj } from "../../data/constant";
 import { TweenMax, Power1 } from "gsap";
 
 const Lore = () => {
   const { bossManImg, bossManVideo } = mediaDataObj;
-  const videoRef = useRef(null);
+  // const videoRef = useRef(null);
   const [muteMode, setMuteMode] = useState(
     () => JSON.parse(sessionStorage.getItem("isMute")) ?? true
   );
@@ -55,46 +55,64 @@ const Lore = () => {
   //   };
   // }, [isScrolling]);
 
-  const registerVideo = (bound, video) => {
-    bound = document.querySelector(bound);
-    video = document.querySelector(video);
-    const scrollVideo = () => {
-      if (video.duration) {
-        const distanceFromTop =
-          window.scrollY + bound.getBoundingClientRect().top;
-        const rawPercentScrolled =
-          (window.scrollY - distanceFromTop) /
-          (bound.scrollHeight - window.innerHeight);
-        const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
-
-        video.currentTime = video.duration * percentScrolled;
-      }
-      requestAnimationFrame(scrollVideo);
-    };
-    requestAnimationFrame(scrollVideo);
-  };
+  const videoRef = useRef(null);
+  const scrollSectionRef = useRef(null);
+  const [hasLoaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    registerVideo("#bound-two", "#bound-two video");
+    setLoaded(true);
+    const playbackConst = 500; // Adjust the constant as needed
+    // Use requestAnimationFrame for smooth playback
+    function scrollPlay() {
+      if (videoRef.current) {
+        const frameNumber = window.pageYOffset / playbackConst;
+        videoRef.current.currentTime = frameNumber;
+      }
+      window.requestAnimationFrame(scrollPlay);
+    }
+
+    window.requestAnimationFrame(scrollPlay);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    video.addEventListener("loadedmetadata", () => {
+      const { duration } = video;
+      const playbackConst = 500;
+      const scrollSection = scrollSectionRef.current;
+      // console.log("scrollSection", videoRef.current.duration);
+      if (videoRef?.current) {
+        scrollSection.style.height =
+          Math.floor(duration) * playbackConst + "px";
+      }
+      // console.log(duration); // Output: video duration in seconds
+    });
+
+    return () => {
+      video.removeEventListener("loadedmetadata", () => {});
+    };
   }, []);
 
   return (
     <>
       <div className="video-container">
         <video
-          loop
+          id="v0"
+          // loop
           preload
           className="w-full"
           ref={videoRef}
-          autoPlay={true}
-          muted={muteMode}
+          // autoPlay={true}
+          // muted={muteMode}
           controlsList="nodownload"
-          playsInline={true}
-          disablePictureInPicture={true}
+          // playsInline={true}
+          // disablePictureInPicture={true}
           controls={false}
         >
           <source src={bossManVideo} type="video/mp4" />
         </video>
+        <div ref={scrollSectionRef} id="scrollSection"></div>
       </div>
     </>
   );

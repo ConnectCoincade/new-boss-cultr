@@ -1,5 +1,5 @@
 import React from "react";
-import { mediaDataObj } from "../../constant";
+import { mediaDataObj } from "../../data/constant";
 // import discord from "../../assets/discord.png";
 // import twiter from "../../assets/twiter.png";
 import "./Footer.css";

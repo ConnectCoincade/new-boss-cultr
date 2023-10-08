@@ -30,7 +30,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 20px 2px rgba(0, 0, 0,.1);
-    transition: 1s;
+    /* transition: 1s; */
 }
 .image-front{
     position: absolute;
@@ -47,6 +47,6 @@
 .image-front:hover{
     
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    /* transition: opacity 0.5s ease-in-out; */
     /* z-index: ; */
 }

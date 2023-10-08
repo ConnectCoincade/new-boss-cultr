@@ -3,6 +3,9 @@ import Navbar from '../navbar/Navbar';
 import Hero from '../hero/Hero';
 import Lore from '../lore/Lore';
 import About from '../about/About';
+
+import About3 from '../about/About3';
+import About4 from '../about/About4';
 import Roadmap from '../roadmap/Roadmap';
 import Faqs from '../faq/Faqs';
 import Footer from '../../container/Footer/Footer'
@@ -10,6 +13,7 @@ import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
 import '../home/home.css'
 import Lore2 from '../lore/Lore2';
+import List from '../about/List';
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [refData, setRefData] = useState('')
@@ -98,8 +102,11 @@ const Home = () => {
           </section>
         
           <section ref={about}>
-            <About />
+            <About4 />
           </section>
+          {/* <section ref={about}>
+            <About />
+          </section> */}
           <section ref={roadmap}>
             <Roadmap />
           </section>

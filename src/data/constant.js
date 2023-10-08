@@ -1,22 +1,23 @@
-import boss1 from './assets/mb1.png';
-import boss2 from './assets/1.png';
-import table from './assets/table.png';
-import backcard from './assets/back-card.jpg'
-import kingcard from './assets/king-card.jpg';
-import hero from './assets/website man.mp4';
-import title from './assets/lifestyle text.mp4';
-import Logo from './assets/boss-logo-black.png';
-import logo from "./assets/logo.png";
-import bossManImg from './assets/bossMan.png';
-import bossManVideo from './assets/BG 1.mp4';
-import BossPicture1 from './assets/Boss1.png';
-import BossPicture2 from './assets/Boss2.png'
-import BossPicture3 from './assets/Boss3.png'
-import BossPictureHover1 from './assets/Boss1-hover.png'
-import BossPictureHover2 from './assets/Boss2-hover.png'
-import BossPictureHover3 from './assets/Boss3-hover.png';
-import longVideo from './assets/long.mp4';
-import closeButton from './assets/close-button.png'
+import boss1 from '../assets/mb1.png';
+import boss2 from '../assets/1.png';
+import table from '../assets/table.png';
+import backcard from '../assets/back-card.jpg'
+import kingcard from '../assets/king-card.jpg';
+import hero from '../assets/website man.mp4';
+import title from '../assets/lifestyle text.mp4';
+import Logo from '../assets/boss-logo-black.png';
+import logo from "../assets/logo.png";
+import bossManImg from '../assets/bossMan.png';
+import bossManVideo from '../assets/BG 1.mp4';
+import BossPicture1 from '../assets/Boss1.png';
+import BossPicture2 from '../assets/Boss2.png'
+import BossPicture3 from '../assets/Boss3.png'
+import BossPictureHover1 from '../assets/Boss1-hover.png'
+import BossPictureHover2 from '../assets/Boss2-hover.png'
+import BossPictureHover3 from '../assets/Boss3-hover.png';
+import longVideo from '../assets/long.mp4';
+import closeButton from '../assets/close-button.png';
+import lock from '../assets/lock4.png';
 
 export const mediaDataObj = {
     BossPicture1,
@@ -25,6 +26,7 @@ export const mediaDataObj = {
     BossPictureHover1,
     BossPictureHover2,
     BossPictureHover3,
+    lock,
     bossManVideo,
     boss1,
     boss2,
@@ -53,7 +55,7 @@ export const mediaDataObj = {
 
     bossDetails:
     [
-        {BossPicture:BossPicture1,BossPictureHover:BossPictureHover1,description:"asbasavhjsvahvahvshavshavsvavavhjhavjhavhjavdhjcvdhasvdhvahgdvasd"},
+        {BossPicture:BossPicture1,BossPictureHover:BossPictureHover1,description:"sweety.............................................................................."},
         {BossPicture:BossPicture2,BossPictureHover:BossPictureHover2,description:"jbakjdabkjdbaskjdbkjsbdkjsbjkdbsjkbdjsbdbskdbskjbdkjsbdkjbskjsbd"},
         {BossPicture:BossPicture3,BossPictureHover:BossPictureHover3,description:"kjdkjsbdjksbdbsdhvsdvsdvhsvdkhsvdjksjkdvsjdkjsdjbsbdskjbdksjbdjds"},
     ]    

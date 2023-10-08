@@ -1,5 +1,5 @@
 import React from 'react';
-import { mediaDataObj } from '../../constant';
+import { mediaDataObj } from '../../data/constant';
 import './faq.css';
 import Accordion from './Accordion';
 const Faqs = () => {

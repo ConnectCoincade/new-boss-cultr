@@ -1,5 +1,5 @@
 import React , {useRef, useState, useEffect} from 'react';
-import { mediaDataObj } from '../../constant';
+import { mediaDataObj } from '../../data/constant';
 import './hero.css'
 const Hero = () => {
   const {title,hero, longVideo} = mediaDataObj;
