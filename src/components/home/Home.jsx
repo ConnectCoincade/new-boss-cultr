@@ -3,7 +3,7 @@ import Navbar from '../navbar/Navbar';
 import Hero from '../hero/Hero';
 import Lore from '../lore/Lore';
 import About from '../about/About';
-
+import { Fade,Slide } from 'react-awesome-reveal';
 import About3 from '../about/About3';
 import About4 from '../about/About4';
 import Roadmap from '../roadmap/Roadmap';
@@ -11,6 +11,7 @@ import Faqs from '../faq/Faqs';
 import Footer from '../../container/Footer/Footer'
 import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
+import Roadmap1 from '../roadmap/Roadmap1';
 import '../home/home.css'
 import Lore2 from '../lore/Lore2';
 import List from '../about/List';
@@ -92,6 +93,7 @@ const Home = () => {
       ) : (<>
         <Navbar scrollToSection={scrollToSection} />
 
+       
           <section ref={hero} >
           <Hero  />
           </section>
@@ -100,16 +102,21 @@ const Home = () => {
           <Lore />
           {/* <Lore2/> */}
           </section>
-        
+
           <section ref={about}>
-            <About4 />
-          </section>
-          {/* <section ref={about}>
             <About />
-          </section> */}
-          <section ref={roadmap}>
-            <Roadmap />
           </section>
+
+          {/* <Slide >
+         <p>I am an animated text</p>
+        </Slide> */}
+          <section ref={roadmap}>
+            <Roadmap1 />
+          </section>
+          {/* <section ref={roadmap}>
+            <Roadmap />
+          </section> */}
+
           <section ref={faqs}>
             <Faqs />
           </section>

@@ -18,6 +18,16 @@ import BossPictureHover3 from '../assets/Boss3-hover.png';
 import longVideo from '../assets/long.mp4';
 import closeButton from '../assets/close-button.png';
 import lock from '../assets/lock4.png';
+import kingCard1 from '../assets/3x/Asset1-king.png'
+import kingCard2 from '../assets/3x/Asset2-king.png'
+import kingCard3 from '../assets/3x/Asset3-king.png'
+import kingCard4 from '../assets/3x/Asset4-king.png'
+import cardBack1 from '../assets/3x/Asset1-back.png'
+import cardBack2 from '../assets/3x/Asset2-back.png'
+import cardBack3 from '../assets/3x/Asset3-back.png'
+import cardBack4 from '../assets/3x/Asset4-back.png'
+import cardBack5 from '../assets/3x/Asset5-back.png';
+import Dunes from '../assets/Dark_Haired_Girl_in_disbelief_1.mp4'
 
 export const mediaDataObj = {
     BossPicture1,
@@ -41,6 +51,16 @@ export const mediaDataObj = {
     bossManImg,
     longVideo,
     closeButton,
+    Dunes,
+    kingCard1,
+    kingCard2,
+    kingCard3,
+    kingCard4,
+    cardBack1,
+    cardBack2,
+    cardBack3,
+    cardBack4,
+    cardBack5,
     faqs: [
            {que :"What are NFTs and how do they work?",ans:"NFTs, or non-fungible tokens, are a type of digital asset that represent ownership of a unique item or piece of content, such as a piece of artwork or music. They are stored on a blockchain, which is a digital ledger that keeps track of all transactions."},
            {que:"How can I purchase one of your NFTs?",ans:"Once it's available, you will be able to purchase our NFTs on Opensea."},

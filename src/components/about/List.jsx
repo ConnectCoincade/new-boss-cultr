@@ -1,8 +1,9 @@
 import { items } from "../../data/constant2";
 import React ,{useState}from "react";
 import { motion } from "framer-motion";
-// import './about.css';
+import './about.css';
 import { mediaDataObj } from '../../data/constant';
+import { Fade, JackInTheBox, Slide } from "react-awesome-reveal";
 
 const Card = ({ setSelected, item }) => {
 
@@ -10,17 +11,17 @@ const Card = ({ setSelected, item }) => {
 
  
   return (
-    <div className="inline-block w-full mb-4">
+    <motion.div className="inline-block w-full mb-4" initial={{opacity:0,scale:0,x:500}} whileInView={{opacity:1,scale:1,x:0}} animate={{x:0}} >
      
-     
+     <Fade direction="right">
       <motion.img
-        whileHover={{
-          // scale: 1.025,
-          // transition: {
-          //   duration: 0.2,
-          // },
+        // whileHover={{
+        //   // scale: 1.025,
+        //   // transition: {
+        //   //   duration: 0.2,
+        //   // },
                    
-        }}
+        // }}
         whileTap={{
           // scale: 0.95,
         }}
@@ -29,22 +30,25 @@ const Card = ({ setSelected, item }) => {
         }}
         layoutId={`card-${item.id}`}
         src={isHovering ? item.urlOnHover: item.url}
-        className="shadow-slate-400 drop-shadow-xl w-full bg-base-100 shadow-xl image-full cursor-pointer box px-1 m-4 border-4 rounded-xl border-silver-900 "
+        className={isHovering ? `image-hover-${item.id} w-full shadow-2xl shadow-${item.color}-500  cursor-pointer px-1 m-4 border-2 border-${item.color}-600 `: `w-full bg-base-100 image-full cursor-pointer px-1 m-4`} 
         onMouseEnter={()=>setIsHovering(true)}
         onMouseLeave={()=>setIsHovering(false)}
       />
-    </div>
+      </Fade>
+    </motion.div>
   );
 };
 
 export default function List({ setSelected }) {
- const {bossDetails} = mediaDataObj
+ 
   return (
-    <div className="">
+    <div className=""  >
        <h2 className='about-heading'>About Bosses</h2>
       <div className="columns-2 md:columns-3 xl:columns-4 gap-4 container flex justify-between flex-row px-6">
         {items.map((item) => (
+          
           <Card key={item.id} setSelected={setSelected} item={item} />
+          
         ))}
       </div> 
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { mediaDataObj } from "../../data/constant";
+import { items } from "../../data/constant2";
 
 export default function Modal({ selected, setSelected }) {
 
@@ -13,14 +14,15 @@ export default function Modal({ selected, setSelected }) {
   return (
     <div
       onClick={() => setSelected(null)}
-      className="fixed inset-0 bg-black/50 z-40 cursor-pointer overflow-y-scroll "
+      className="fixed inset-0 backdrop-blur-sm bg-black/50 z-20 cursor-pointer overflow-y-scroll "
     >
       <div
         onClick={(e) => e.stopPropagation()}
         className="flex justify-between mx-10 my-20 px-10 cursor-default "
       >
         <motion.div layoutId={`card-${selected.id}`}>
-          <img className='max-w-[550px] backdrop-blur-xl  p-5 ml-12 rounded-xl border-2 border-red-600 ' src={selected.urlOnHover} />
+          <img className={`max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl border border-${selected.color}-600 shadow-${selected.color}-500  shadow-xl`} src={selected.urlOnHover} />
+          {/* <img className="max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl border-2 border-red-600" src={selected.urlOnHover} /> */}
           {/* <div className='backdrop-blur-lg inline-flex justify-between' >
                     <div  >
                     <img className='backdrop-blur-xl border-2 p-10 w-3/4 ml-12 rounded-xl m-8 border-red-50' src={selected.urlOnHover} alt="Boss" />
