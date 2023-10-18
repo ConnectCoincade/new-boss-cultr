@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { mediaDataObj } from "../../data/constant";
-import './roadmap.css'
+import './roadmap.css';
 export default function RoadmapModal({ select, setSelect }) {
 
   const {closeButton} = mediaDataObj;
@@ -47,9 +47,7 @@ export default function RoadmapModal({ select, setSelect }) {
                      </div>
                      <div className="">
                      <p className=' text-red-500 font-bold text-lg'>{select.description}vakajksabdbajkdbabdabdabdabvakhdvakhvkavskvakvavavjkdvkadkjvsadvjavdavhjavdv</p>
-                     </div>
-                    
-                   
+                     </div>                 
                     </div>
          
         </motion.div>

@@ -8,20 +8,13 @@ import { Fade, JackInTheBox, Slide } from "react-awesome-reveal";
 const Card = ({ setSelected, item }) => {
 
   const [isHovering,setIsHovering] = useState(false)
-
  
   return (
     <motion.div className="inline-block w-full mb-4" initial={{opacity:0,scale:0,x:500}} whileInView={{opacity:1,scale:1,x:0}} animate={{x:0}} >
      
      <Fade direction="right">
       <motion.img
-        // whileHover={{
-        //   // scale: 1.025,
-        //   // transition: {
-        //   //   duration: 0.2,
-        //   // },
-                   
-        // }}
+  
         whileTap={{
           // scale: 0.95,
         }}
@@ -30,7 +23,8 @@ const Card = ({ setSelected, item }) => {
         }}
         layoutId={`card-${item.id}`}
         src={isHovering ? item.urlOnHover: item.url}
-        className={isHovering ? `image-hover-${item.id} w-full shadow-2xl shadow-${item.color}-500  cursor-pointer px-1 m-4 border-2 border-${item.color}-600 `: `w-full bg-base-100 image-full cursor-pointer px-1 m-4`} 
+        // className={isHovering ? ` w-full shadow-${item.color}-600  cursor-pointer px-1 m-4 border-2`: `w-full bg-base-100 image-full cursor-pointer px-1 m-4`} 
+        className={`image-hover-${item.id}`}
         onMouseEnter={()=>setIsHovering(true)}
         onMouseLeave={()=>setIsHovering(false)}
       />

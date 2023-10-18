@@ -13,14 +13,16 @@ import cardBack2 from '../assets/3x/Asset2-back.png';
 import cardBack3 from '../assets/3x/Asset3-back.png';
 import cardBack4 from '../assets/3x/Asset4-back.png';
 import cardBack5 from '../assets/3x/Asset5-back.png';
+import cardBack6 from '../assets/3x/Asset6-back.png';
+import cardBack7 from '../assets/3x/Asset7-back.png';
 
 export const items = [
     {
       id: 1,
       url: boss1,
       urlOnHover:bossOnHover1,
-      title: "Lorem ipsum",
-      description: "Lorem ipsum dolor1 akasakjbskabsabakkabsjkabjsbajkbsjabsakasbjkabjsbajksbj",
+      title:`Nova Starling (Blue Nomad Syndicate)`,
+      description:`Visionary leader of the freedom-loving Nomad Syndicate. Drives the advanced "Quasar" customized to push the limits. Cares for members but hides a simmering rage at defeat. Relies on cunning and technical creativity to beat rivals.`,
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
       color:"blue"
     },
@@ -28,8 +30,8 @@ export const items = [
       id: 2,
       url: boss2,
       urlOnHover:bossOnHover2,
-      title: "Lorem ipsum",
-      description: "Lorem ipsum dolor2 ksbdkjbajsdbjabsdjbajdbajbd",
+      title:`Blackheart Beaumont (Black Star Syndicate)`,
+      description:`Enigmatic leader shrouded in darkness. Drives the stealthy "Voidrunner" equipped with forbidden weapons. Ruthless in pursuit of his goals yet shows hints of buried nobility. Trusts no one and relies on forbidden knowledge to prove supremacy.`,
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
       color:"gray"
     },
@@ -37,8 +39,8 @@ export const items = [
       id: 3,
       url: boss3,
       urlOnHover:bossOnHover3,
-      title: "Lorem ipsum",
-      description: "Lorem ipsum dolor3",
+      title:`Velkor the Vicious (Red Star Syndicate)`,
+      description:`Ruthless leader who will stop at nothing to achieve racing domination. Drives the menacing "Red Rocket" armed with devastating weapons and speed boosters. Rules through intimidation yet inspires loyalty from his inner circle. Winning is all that matters, no matter the cost.`,
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
       color:"red"
     }
@@ -47,32 +49,50 @@ export const items = [
   export const cardItems = [
     {
       id: 1,
-      url: cardBack5,
+      url: cardBack6,
       urlOnHover:kingCard1,
-      title: "Lorem ipsum",
-      description: "Lorem ipsum dolor1 akasakjbskabsabakkabsjkabjsbajkbsjabsakasbjkabjsbajksbj card1",
+      title: "Card-I",
+      description: `<li>Opening of discord to public</li>
+      <li>Twitter marketing campaign</li>
+      <li>Collab with top Projects Daos</li>
+      <li>Announcing web 2 and web3 partners.</li>
+      <li>Announcing white-paper/utilities</li>
+      <li>Bosscultr - Website Launch</li>
+      `,
+      unlock:true
     },
     {
       id: 2,
-      url: cardBack5,
+      url: cardBack7,
       urlOnHover:kingCard2,
-      title: "Lorem ipsum",
-      description: "Lorem ipsum dolor2 ksbdkjbajsdbjabsdjbajdbajbd card2",
+      title: "Card-II",
+      description: `<li>Announce mint date/ price.</li>
+      <li>Announce roadmap Post-MInt.</li>
+      <li>Beta Access of Retro Racers to OG and WL Members.</li>
+      <li>Mint Day.</li>
+      `,
+      unlock:false
     },
     {
       id: 3,
       url: cardBack5,
       urlOnHover:kingCard3,
-      title: "Lorem ipsum",
-      description: "Lorem ipsum card3",
+      title: "Card-III",
+      description: `<li>Retro Racers - Launch website</li>
+      <li>Retro racers game launch.</li>
+      <li>Social Launch for Retroracers.</li>
+      <li>Announcing web 2 and web3 partners.</li>
+      <li>Announcing white-paper/utilities.</li>
+      `,
+      unlock:false
     },
     {
       id: 4,
       url: cardBack5,
       urlOnHover:kingCard4,
-      title: "Lorem ipsum",
+      title: "Card-IV",
       description: "Lorem ipsum card4",
-     
+      unlock:false
     }
 
   ]

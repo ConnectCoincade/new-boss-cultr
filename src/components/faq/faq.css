@@ -59,3 +59,16 @@
 .faqs-que:hover{
     background-color: #f74f58;
 }
+.list-a{
+    list-style-type:square;
+   
+}
+.list-b{
+    list-style-type: decimal;
+}
+.list-para{
+    display: contents;
+}
+.orderList .unorderList{
+    padding: 10px;
+}

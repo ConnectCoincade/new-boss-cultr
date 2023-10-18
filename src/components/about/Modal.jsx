@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { mediaDataObj } from "../../data/constant";
 import { items } from "../../data/constant2";
-
+import './about.css'
 export default function Modal({ selected, setSelected }) {
 
   const {closeButton} = mediaDataObj;
@@ -21,7 +21,7 @@ export default function Modal({ selected, setSelected }) {
         className="flex justify-between mx-10 my-20 px-10 cursor-default "
       >
         <motion.div layoutId={`card-${selected.id}`}>
-          <img className={`max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl border border-${selected.color}-600 shadow-${selected.color}-500  shadow-xl`} src={selected.urlOnHover} />
+          <img className={`image-modal-${selected.id} max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl`} src={selected.urlOnHover} />
           {/* <img className="max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl border-2 border-red-600" src={selected.urlOnHover} /> */}
           {/* <div className='backdrop-blur-lg inline-flex justify-between' >
                     <div  >
@@ -58,11 +58,12 @@ export default function Modal({ selected, setSelected }) {
           <p className=' text-red-500 font-bold text-lg py-10 '>{selected.description}</p> */}
           <div className='rounded-xl m-4 max-w-[950px] '>
                     <div className='flex justify-between'>  
-                     <h3 className="text-5xl font-bold text-gray-600 underline decoration-red-600 hover:decoration-gray-400">Description</h3>   
+                     <h3 className="text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>   
                      <img  onClick={() => setSelected(null)}className='w-10 mr-5 cursor-pointer' src={closeButton} alt="closeButton"/>
                      </div>
-                    <p className=' text-red-500 font-bold text-lg py-10 '>{selected.description}</p>
-                   
+                     <div className="para">
+                    <p className='text-red-500 font-bold text-lg py-10 '>{selected.description}</p>
+                    </div>
                     </div>
           {/* {selected.tags.map((tag) => {
             return (

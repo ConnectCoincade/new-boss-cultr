@@ -1,9 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { mediaDataObj } from "../../data/constant";
+import { Waypoint } from 'react-waypoint';
 // import './lore.css'
 
 const Lore = () => {
   const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
+  let [shouldPlay, updatePlayState] = useState(false);
   
   const [muteMode, setMuteMode] = useState(
     () => JSON.parse(sessionStorage.getItem("isMute")) ?? true
@@ -12,6 +14,13 @@ const Lore = () => {
   const videoRef = useRef(null);
   const scrollSectionRef = useRef(null);
   const [hasLoaded, setLoaded] = useState(false);
+
+  let handleEnterViewport = function() {
+    updatePlayState(true);
+  }
+  let handleExitViewport = function() {
+    updatePlayState(false);
+  }
 
   // useEffect(() => {
   //   setLoaded(true);
@@ -28,39 +37,40 @@ const Lore = () => {
   //   window.requestAnimationFrame(scrollPlay);
   // }, []);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    setLoaded(true);
-    const playbackConst = 100; // Adjust the constant as needed
-    // Use requestAnimationFrame for smooth playback
-    function scrollPlay() {
-      if (videoRef.current) {
-        const frameNumber = window.pageYOffset / playbackConst;
-        videoRef.current.currentTime = frameNumber;
-      }
-      window.requestAnimationFrame(scrollPlay);
-    }
+  // useEffect(() => {
+  //   const video = videoRef.current;
+  //   setLoaded(true);
+  //   const playbackConst = 600; // Adjust the constant as needed
+  //   // Use requestAnimationFrame for smooth playback
+  //   function scrollPlay() {
+  //     if (videoRef.current) {
+  //       const frameNumber = window.pageYOffset / playbackConst;
+  //       videoRef.current.currentTime = frameNumber;
+  //     }
+  //     window.requestAnimationFrame(scrollPlay);
+  //   }
 
-    window.requestAnimationFrame(scrollPlay);
+  //   window.requestAnimationFrame(scrollPlay);
 
-    video.addEventListener("loadedmetadata", () => {
-      const { duration } = video;
-      // console.log('duration->', duration);
-      // const playbackConst = 500;
-      const scrollSection = scrollSectionRef.current;
-      // console.log("scrollSection", videoRef.current.duration);
-      if (videoRef?.current) {
-        scrollSection.style.height = Math.floor(duration) * playbackConst + "px";
-        scrollSection.style.height = "80px"
-        // console.log('scrollSection.style.height->', scrollSection.style.height);
-      }
-      // console.log(duration); // Output: video duration in seconds
-    });
+  //   video.addEventListener("loadedmetadata", () => {
+  //     const { duration } = video;
+  //     // console.log('duration->', duration);
+  //     // const playbackConst = 500;
+  //     const scrollSection = scrollSectionRef.current;
+  //     // console.log("scrollSection", videoRef.current.duration);
+  //     if (videoRef?.current) {
+  //       scrollSection.style.height = Math.floor(duration) * playbackConst + "px";
+  //       scrollSection.style.height = "80px"
+  //       // console.log('scrollSection.style.height->', scrollSection.style.height);
+  //     }
+  //     // console.log(duration); // Output: video duration in seconds
+  //   });
 
-    return () => {
-      video.removeEventListener("loadedmetadata", () => {});
-    };
-  }, []);
+  //   return () => {
+  //     video.removeEventListener("loadedmetadata", () => {});
+  //   };
+  // }, []);
+  
   // useEffect(()=>{
   //   const handleScroll = () =>{
   //     const video =  videoRef.current;
@@ -169,8 +179,55 @@ const Lore = () => {
   //   };
   // }, []);
 
+  // useEffect(() => {
+  //   setLoaded(true);
+  //   const playbackConst = 90; // Adjust the constant as needed
+  //   function scrollPlay() {
+  //     if (videoRef.current) {
+  //       const frameNumber = window.scrollY / playbackConst;
+  //       videoRef.current.currentTime = frameNumber;
+  //     }
+  //     window.requestAnimationFrame(scrollPlay);
+  //   }
+
+  //   window.requestAnimationFrame(scrollPlay);
+  // }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    video.addEventListener("loadedmetadata", () => {
+      const { duration } = video;
+      const playbackConst = 100;
+      const scrollSection = scrollSectionRef.current;
+      console.log("scrollSection->", duration);
+      setLoaded(true);
+      if (videoRef?.current) {
+        scrollSection.style.height = Math.floor(duration) * playbackConst + "px";
+        function scrollPlay() {
+          if (videoRef.current) {
+            const frameNumber = window.scrollY / playbackConst;
+            console.log('frameNumber->', frameNumber);
+            videoRef.current.currentTime = frameNumber;
+          }
+          window.requestAnimationFrame(scrollPlay);
+        }
+    
+        window.requestAnimationFrame(scrollPlay);
+      }
+    });
+
+    return () => {
+      video.removeEventListener("loadedmetadata", () => {});
+    };
+  }, []);
+
   return (
     <>
+    <Waypoint 
+      onEnter={handleEnterViewport}
+      onLeave={handleExitViewport}
+    >
       <div className="video-container">
         <video
           id="v0"
@@ -191,6 +248,8 @@ const Lore = () => {
         </video>
         <div ref={scrollSectionRef} id="scrollSection"></div>
       </div>
+    </Waypoint>
+      
     </>
   );
 };

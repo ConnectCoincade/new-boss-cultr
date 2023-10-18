@@ -1,5 +1,5 @@
 import { Fragment, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react';
+
 import { mediaDataObj } from '../../data/constant';
 import { motion } from 'framer-motion';
 

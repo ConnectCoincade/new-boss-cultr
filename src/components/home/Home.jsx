@@ -11,7 +11,6 @@ import Faqs from '../faq/Faqs';
 import Footer from '../../container/Footer/Footer'
 import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
-import Roadmap1 from '../roadmap/Roadmap1';
 import '../home/home.css'
 import Lore2 from '../lore/Lore2';
 import List from '../about/List';
@@ -106,17 +105,11 @@ const Home = () => {
           <section ref={about}>
             <About />
           </section>
-
-          {/* <Slide >
-         <p>I am an animated text</p>
-        </Slide> */}
+          
           <section ref={roadmap}>
-            <Roadmap1 />
-          </section>
-          {/* <section ref={roadmap}>
             <Roadmap />
-          </section> */}
-
+          </section>
+          
           <section ref={faqs}>
             <Faqs />
           </section>

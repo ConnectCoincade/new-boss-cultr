@@ -127,4 +127,7 @@
 .details{
     position: absolute;
     left:400px;
+    /* bottom: -0px; */
+    bottom: -130px;
+    width: 500px;
 }

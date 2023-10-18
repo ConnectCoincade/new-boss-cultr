@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './faq.css'
 import { Rotate ,Bounce, Fade} from 'react-awesome-reveal';
 
-const Accordion = ({question,answer}) => {
+const Accordion = ({question,htmlContent}) => {
     const [show, setShow] = useState(false);
   return (
     <>
-    <Bounce direction='right'>
+    <Fade direction='right'>
      <div className='faqs-data' >
             <button className='faqs-que' onClick={()=>setShow(!show)}>
             {question}
@@ -14,11 +14,16 @@ const Accordion = ({question,answer}) => {
             </button>
             <div className='faqs-ans'>
               
-             {show && <Fade direction='up'><p >{answer}</p></Fade> } 
+             {show && <Fade direction='up'>
+              
+            
+                <div dangerouslySetInnerHTML={{ __html: htmlContent }}/>
+                
+              </Fade> } 
              
             </div>
      </div>
-     </Bounce>
+     </Fade>
     </>
   )
 }

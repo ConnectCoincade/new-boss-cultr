@@ -19,7 +19,7 @@ const Faqs = () => {
     <div>
       {faqs.map((data,index)=>{
         return (
-         <Accordion question={data.que} answer={data.ans} key={index} />
+         <Accordion question={data.que} key={index} htmlContent={data.htmlContent} />
           )
       })}
     </div>
