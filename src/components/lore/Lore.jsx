@@ -218,7 +218,7 @@ const Lore = () => {
   return (
     <>
  
-      <div className="video-container">
+      <div className="video-container" id="scrollSection" ref={scrollSectionRef}>
         <video
           id="v0"
           // loop
@@ -236,7 +236,7 @@ const Lore = () => {
           <source src={bossManVideo}  type="video/mp4" />
           {/* <source src={Dunes}  type="video/mp4" /> */}
         </video>
-        <div ref={scrollSectionRef} id="scrollSection"></div>
+        {/* <div ref={scrollSectionRef} id="scrollSection"></div> */}
       </div>
    
       
