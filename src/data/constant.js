@@ -31,7 +31,7 @@ import cardBack6 from '../assets/3x/Asset6-back.png';
 import cardBack7 from '../assets/3x/Asset7-back.png';
 import twitter from '../assets/twiter.png'
 import discord from '../assets/discord.png';
-import Dunes from '../assets/Dark_Haired_Girl_in_disbelief_1.mp4'
+
 
 export const mediaDataObj = {
     BossPicture1,
@@ -55,7 +55,6 @@ export const mediaDataObj = {
     bossManImg,
     longVideo,
     closeButton,
-    Dunes,
     twitter,
     discord,
     kingCard1,
