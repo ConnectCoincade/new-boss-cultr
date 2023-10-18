@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { mediaDataObj } from "../../data/constant";
-import { Waypoint } from 'react-waypoint';
+
 // import './lore.css'
 
 const Lore = () => {
   const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
-  let [shouldPlay, updatePlayState] = useState(false);
+
   
   const [muteMode, setMuteMode] = useState(
     () => JSON.parse(sessionStorage.getItem("isMute")) ?? true
@@ -14,13 +14,6 @@ const Lore = () => {
   const videoRef = useRef(null);
   const scrollSectionRef = useRef(null);
   const [hasLoaded, setLoaded] = useState(false);
-
-  let handleEnterViewport = function() {
-    updatePlayState(true);
-  }
-  let handleExitViewport = function() {
-    updatePlayState(false);
-  }
 
   // useEffect(() => {
   //   setLoaded(true);
@@ -224,10 +217,7 @@ const Lore = () => {
 
   return (
     <>
-    <Waypoint 
-      onEnter={handleEnterViewport}
-      onLeave={handleExitViewport}
-    >
+ 
       <div className="video-container">
         <video
           id="v0"
@@ -248,7 +238,7 @@ const Lore = () => {
         </video>
         <div ref={scrollSectionRef} id="scrollSection"></div>
       </div>
-    </Waypoint>
+   
       
     </>
   );
