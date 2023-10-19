@@ -1,8 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Navbar from '../navbar/Navbar';
 import Hero from '../hero/Hero';
-// import Lore from '../lore/Lore';
-import Lore3 from '../lore/lore3';
+import Lore from '../lore/Lore';
 import About from '../about/About';
 import { Fade,Slide } from 'react-awesome-reveal';
 import About3 from '../about/About3';
@@ -13,7 +12,6 @@ import Footer from '../../container/Footer/Footer'
 import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
 import '../home/home.css'
-// import Lore2 from '../lore/Lore2';
 import List from '../about/List';
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -99,9 +97,7 @@ const Home = () => {
           </section>
   
           <section ref={lore}>
-          {/* <Lore /> */}
-          {/* <Lore2/> */}
-          <Lore3/>
+          <Lore /> 
           </section>
 
           <section ref={about}>
