@@ -19,7 +19,7 @@ const Lore = () => {
 			
 			video.currentTime = video.duration * percentScrolled;
 		}
-		// requestAnimationFrame(scrollVideo);
+		requestAnimationFrame(scrollVideo);
         setTimeout(() => {
             requestAnimationFrame(scrollVideo);
         },350);
@@ -41,8 +41,8 @@ const Lore = () => {
     <div id="bound-two" class="scroll-bound">
 		<div class="content">
  			<video muted preload>
-                <source src={bossManVideo} type="video/mp4"/>
-            </video>
+          <source src={bossManVideo} type="video/mp4"/>
+      </video>
 		</div>
 	</div>
    
