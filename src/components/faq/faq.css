@@ -72,3 +72,22 @@
 .orderList .unorderList{
     padding: 10px;
 }
+@media (min-width: 360px) and (max-width: 415px) {
+
+    .faqs-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 15px;
+        padding: 1px 0px;
+        width: 95%;
+        /* border: 1px solid gray; */
+    }
+    .faqs-heading {
+        font-size: 44px;
+        margin-right: 0px;
+    }
+    .faqs-que{
+        font-size: 14px;
+    }
+}
