@@ -22,11 +22,12 @@ const Card = ({ setSelected, item }) => {
           setSelected(item);
         }}
         layoutId={`card-${item.id}`}
+        onMouseEnter={()=>setIsHovering(true)}
+        onMouseLeave={()=>setIsHovering(false)}
         src={isHovering ? item.urlOnHover: item.url}
         // className={isHovering ? ` w-full shadow-${item.color}-600  cursor-pointer px-1 m-4 border-2`: `w-full bg-base-100 image-full cursor-pointer px-1 m-4`} 
         className={`image-hover-${item.id}`}
-        onMouseEnter={()=>setIsHovering(true)}
-        onMouseLeave={()=>setIsHovering(false)}
+        
       />
       </Fade>
     </motion.div>
@@ -37,7 +38,9 @@ export default function List({ setSelected }) {
  
   return (
     <div className=""  >
-       <h2 className='about-heading'>About Bosses</h2>
+      <div className='h-16'></div>
+       <h2 className='about-heading text-center'>About Bosses</h2>
+       <div className='h-16'></div>
       <div className="columns-2 md:columns-3 xl:columns-4 gap-4 container flex justify-between flex-row px-6">
         {items.map((item) => (
           

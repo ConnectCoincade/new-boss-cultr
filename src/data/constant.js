@@ -8,7 +8,7 @@ import title from '../assets/lifestyle text.mp4';
 import Logo from '../assets/BossCultr Logo white.png';
 import logo from "../assets/BossCultr Logo white.png";
 import bossManImg from '../assets/bossMan.png';
-import bossManVideo from '../assets/BG slowed V2.mp4';
+import bossManVideo from '../assets/BG 2 final.mp4';
 import BossPicture1 from '../assets/Boss1.png';
 import BossPicture2 from '../assets/Boss2.png'
 import BossPicture3 from '../assets/Boss3.png'
@@ -29,6 +29,7 @@ import cardBack4 from '../assets/3x/Asset4-back.png'
 import cardBack5 from '../assets/3x/Asset5-back.png';
 import cardBack6 from '../assets/3x/Asset6-back.png';
 import cardBack7 from '../assets/3x/Asset7-back.png';
+import cardBackLock from '../assets/3x/Asset8-back-lock.png'
 import twitter from '../assets/twiter.png'
 import discord from '../assets/discord.png';
 
@@ -68,6 +69,7 @@ export const mediaDataObj = {
     cardBack5,
     cardBack6,
     cardBack7,
+    cardBackLock,
     faqs: [
            {
             que :"What is Bosscultr?",

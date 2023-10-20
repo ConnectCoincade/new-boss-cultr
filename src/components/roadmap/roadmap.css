@@ -11,84 +11,24 @@
         text-transform: uppercase;
         font-weight: 900;
         margin-right: 100px;
-        /* border-bottom: 1px solid #f74f58; */
         color: #f74f58;
         font-family: sans-serif;
         margin-left:100px ;
     
 }
+
 .image-card{
 
     width: 70%;
-    bottom: 15%;
-    left: 12%;
+    bottom: 28%;
+    left: 16%;
 }
-.card1{
-    width: 70%;
-    border: 4px solid darkred;
-    border-radius: 10px;
-    /* margin: 0px 20px; */
-}
-.container{
-    position: relative;
-}
-
-.wrapper, .single-card{
-
-    position: relative;
-}
-.wrapper{
-    perspective: 900px;
-}
-.single-card{
-    text-align: center;
-    transition: all 1.5s cubic-bezier(0.7,-.5,0.3,1.8);
-    transform-style: preserve-3d;
-}
-.wrapper:hover .single-card{
-    transform: rotateY(180deg);
-}
-.front-card, .back-card{
-    
-    position: relative;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-}
-.front-card{
-    cursor: pointer;
-    /* height: 100%; */
-    backface-visibility: hidden;
-    border-radius: 50px;
-    /* background-size: cover; */
-    background-position: center center;
-}
-.back-card{
-    transform: rotateY(180deg);
-    position: absolute;
-    border-radius: 10px;
-    bottom: 100px;
-    margin: 0px 10px;
-    /* width: 50%  ; */
-    height: 100px;
-    /* background: #000; */
-}
-.content{
-    /* padding-top: 25%; */
-    /* padding: 0px 0px 0px 25px; */
-}
-.lock-img{
-    bottom: 120px;
-    left: 70px;
-    border: 3px solid  gold;
-}
-
 .card{
     
     padding: 20px;
     position: relative;
-    width:290px;
-    height: 320px;
+    width:250px;
+    height: 360px;
     transform-style: preserve-3d;
 }
 .card .face{
@@ -105,10 +45,8 @@
     transition: 1.5s ease-in-out;
     transform: perspective(500px) rotateY(0deg);
 }
-.card .face.front{
-    /* border: 4px solid darkred; */
-    /* box-shadow: #f74f58; */
-}
+
+/*
 .card:hover .face.front{
     transform: perspective(500px) rotateY(180deg);
 }
@@ -117,6 +55,31 @@
 }
 .card:hover .face.back{
     transform: perspective(500px) rotateY(360deg);
+} 
+*/
+ 
+.card-1:hover .face-1.front-1{
+    transform: perspective(500px) rotateY(180deg);
+}
+.card-1 .face-1.back-1{
+    transform: perspective(500px) rotateY(180deg);
+}
+.card-1:hover .face-1.back-1{
+    transform: perspective(500px) rotateY(360deg);
+} 
+
+/* #img-2, #img-3, #img-4:hover{
+    opacity: 0.3;
+} */
+.card-2:hover{
+    opacity: 0.3;
+}
+.card-3:hover{
+    opacity: 0.3;
+}
+
+.card-4:hover{
+    opacity: 0.3;
 }
 
 .modal-component{
@@ -126,8 +89,14 @@
 }
 .details{
     position: absolute;
-    left:400px;
+    left:350px;
+    top: 0px;
     /* bottom: -0px; */
-    bottom: -130px;
+    /* bottom: 100px; */
     width: 500px;
+}
+.lock-img{
+    position: absolute;
+    bottom: -29px;
+    left: 90px;
 }

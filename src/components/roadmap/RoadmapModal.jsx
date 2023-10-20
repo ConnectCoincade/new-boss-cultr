@@ -4,6 +4,8 @@ import { mediaDataObj } from "../../data/constant";
 import './roadmap.css';
 export default function RoadmapModal({ select, setSelect }) {
 
+
+  //********This RoadMap Modal is not useful in any component, but for the refernce we should not delete this because the modal is opening with the help of framer motion */
   const {closeButton} = mediaDataObj;
 
   if (!select) {

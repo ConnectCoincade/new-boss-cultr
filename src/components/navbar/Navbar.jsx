@@ -36,10 +36,10 @@ const scrollToTop = () => {
         />
       </div>
 
-      {/* Menu */}
-      <button id='hamburger-button' className='text-3xl md:hidden' cursor-pointer>
+     
+      {/* <button id='hamburger-button' className='text-3xl md:hidden' cursor-pointer>
       &#9776
-      </button>
+      </button> */}
       <ul className="hidden md:flex md:item-center z-[-1] md:z-auto md:static lg:flex space-x-5 text-red-700">
         <li className="cursor-pointer font-bold text-red-600 decoration-red-600  hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection("lore")} >LORE</li>
         <li className="cursor-pointer font-bold text-red-600 decoration-red-600  hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection("about")} >ABOUT</li>

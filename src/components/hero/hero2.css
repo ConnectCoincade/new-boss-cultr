@@ -11,6 +11,7 @@
   }
   /* Box */
   .box-container {
+    margin-bottom: 500px;
     position: absolute;
     /* top: 220px; */
     /* left: 100px; */
@@ -21,7 +22,17 @@
   }
   #boss-char {
     z-index: 1;
+    margin-top: 500px;
   }
+
+  .scroll-boss {
+    margin-bottom:500px;
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+
   #vid-boss {
     position: fixed;
   }
@@ -119,10 +130,13 @@
   } */
   
   /* Set background and border color */
+  .margin-top-hero {
+    margin-top: 500px;
+  }
   .hero-container {
     
     min-width: 500px;
-    height: 100vh;
+    height: 120vh;
     /* border: 5px solid lightgray; */
     background: #121212;
     background-color: #000;

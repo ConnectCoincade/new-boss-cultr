@@ -7,9 +7,23 @@ const Hero = () => {
   const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
 
   useEffect(() => {
+    setTimeout(() => {
+      console.log('why');
+      // document.getElementById('container-hero-sec').classList.remove("margin-top-hero");
+      window.scrollTo(0, 0);
+    }, 300);
+
+    setTimeout(() => {
+      console.log('test');
+      document.getElementById('boss-char').classList.add("scroll-boss");
+      
+    }, 1200);
+
+
     const handleScroll = event => {
       console.log('window.scrollY->', window.scrollY);
-      if(window.scrollY >= 100) {
+
+      if(window.scrollY >= 300) {
         console.log('here 550');
         document.getElementById('vid-boss').style.display = "none"
         document.getElementById('vid-boss').pause()
@@ -17,10 +31,6 @@ const Hero = () => {
       else {
         document.getElementById('vid-boss').style.display = "block"
         document.getElementById('vid-boss').play()
-        // setTimeout(() => {
-        //   document.getElementById('vid-boss').pause()
-        //   document.getElementById('vid-boss').style.display = "none"
-        // }, 100);
       }
     };
 

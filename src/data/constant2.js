@@ -15,6 +15,7 @@ import cardBack4 from '../assets/3x/Asset4-back.png';
 import cardBack5 from '../assets/3x/Asset5-back.png';
 import cardBack6 from '../assets/3x/Asset6-back.png';
 import cardBack7 from '../assets/3x/Asset7-back.png';
+import cardBackLock from '../assets/3x/Asset8-back-lock.png';
 
 export const items = [
     {
@@ -49,9 +50,9 @@ export const items = [
   export const cardItems = [
     {
       id: 1,
-      url: cardBack6,
+      url: cardBack5,
       urlOnHover:kingCard1,
-      title: "Card-I",
+      title: "PHASE-I",
       description: `<li>Opening of discord to public</li>
       <li>Twitter marketing campaign</li>
       <li>Collab with top Projects Daos</li>
@@ -59,24 +60,26 @@ export const items = [
       <li>Announcing white-paper/utilities</li>
       <li>Bosscultr - Website Launch</li>
       `,
-      unlock:true
+      lock:false
     },
     {
       id: 2,
-      url: cardBack7,
-      urlOnHover:kingCard2,
+      url: cardBackLock,
+      // urlOnHover:kingCard2,
+      urlOnHover:cardBackLock,
       title: "Card-II",
       description: `<li>Announce mint date/ price.</li>
       <li>Announce roadmap Post-MInt.</li>
       <li>Beta Access of Retro Racers to OG and WL Members.</li>
       <li>Mint Day.</li>
       `,
-      unlock:false
+      lock:true
     },
     {
       id: 3,
-      url: cardBack5,
-      urlOnHover:kingCard3,
+      url: cardBackLock,
+      // urlOnHover:kingCard3,
+      urlOnHover:cardBackLock,
       title: "Card-III",
       description: `<li>Retro Racers - Launch website</li>
       <li>Retro racers game launch.</li>
@@ -84,15 +87,16 @@ export const items = [
       <li>Announcing web 2 and web3 partners.</li>
       <li>Announcing white-paper/utilities.</li>
       `,
-      unlock:false
+      lock:true
     },
     {
       id: 4,
-      url: cardBack5,
-      urlOnHover:kingCard4,
+      url: cardBackLock,
+      // urlOnHover:kingCard4,
+      urlOnHover:cardBackLock,
       title: "Card-IV",
       description: "Lorem ipsum card4",
-      unlock:false
+      lock:true
     }
 
   ]
