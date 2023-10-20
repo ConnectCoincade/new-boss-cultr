@@ -13,7 +13,9 @@ const Faqs = () => {
   <>
   <section className='container'>
   <div>
-    <h3 className='faqs faqs-heading'>FAQ'S</h3>
+  <div className='h-16'></div>
+    <h3 className='faqs faqs-heading text-center'>FAQ'S</h3>
+    <div className='h-16'></div>
   </div>
 
     <div>

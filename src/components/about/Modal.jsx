@@ -18,7 +18,7 @@ export default function Modal({ selected, setSelected }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="flex justify-between mx-10 my-20 px-10 cursor-default "
+        className="flex justify-between mx-10 my-20 px-5 cursor-default "
       >
         <motion.div layoutId={`card-${selected.id}`}>
           <img className={`image-modal-${selected.id} max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl`} src={selected.urlOnHover} />
@@ -62,7 +62,7 @@ export default function Modal({ selected, setSelected }) {
                      <img  onClick={() => setSelected(null)}className='w-10 mr-5 cursor-pointer' src={closeButton} alt="closeButton"/>
                      </div>
                      <div className="para">
-                    <p className='text-red-500 font-bold text-lg py-10 '>{selected.description}</p>
+                    <p className='text-cream-500 font-bold text-lg py-10 '>{selected.description}</p>
                     </div>
                     </div>
           {/* {selected.tags.map((tag) => {

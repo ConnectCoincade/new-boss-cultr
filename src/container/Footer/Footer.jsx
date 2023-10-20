@@ -1,9 +1,6 @@
 import React from "react";
 import { mediaDataObj } from "../../data/constant";
-// import discord from "../../assets/discord.png";
-// import twiter from "../../assets/twiter.png";
 import "./Footer.css";
-// import { isMobile } from "react-device-detect";
 function Footer() {
   const {logo,twitter,discord } = mediaDataObj;
   const scrollToTop = () => {

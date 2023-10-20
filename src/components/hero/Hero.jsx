@@ -39,15 +39,7 @@ const Hero = () => {
          >
       <source  src={longVideo} type="video/mp4" /> 
      </video>
-     </div>
-     <div>
-     <video
-     muted 
-      >
-      <source src={title} type="video/mp4" />
-     </video>
-     </div>
-   
+     </div>   
     </div>
     </>
   );
