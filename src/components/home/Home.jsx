@@ -9,7 +9,6 @@ import Footer from '../../container/Footer/Footer'
 import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
 import '../home/home.css'
-
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [refData, setRefData] = useState('')

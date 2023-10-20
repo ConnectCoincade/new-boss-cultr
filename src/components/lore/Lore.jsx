@@ -81,7 +81,7 @@ const Lore = () => {
  
     <div id="bound-two" class="scroll-bound" ref={scrollContainerRef} >
 		<div class="content">
- 			<video muted preload autoPlay ref={videoRef}>
+ 			<video muted preload autoPlay  ref={videoRef}>
          <source src={bossManVideo} type="video/mp4"/>
       </video>
 		</div>
