@@ -1,7 +1,9 @@
 import React , {useRef, useState, useEffect} from 'react';
 import { mediaDataObj } from '../../data/constant';
-import bossChar from '../../assets/bossman.png'
+import bossChar from '../../assets/Bossman_smoke.gif'
 import bosslogo from '../../assets/BossCultr Logo animation.mp4'
+import light from '../../assets/light.png'
+
 import './hero2.css'
 const Hero = () => {
   const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
@@ -45,15 +47,8 @@ const Hero = () => {
     <>
     
       <div class="hero-container">
-        {/* <div class="box-container">
-          <div class="box-top"></div>
-          <div class="box-left"></div>
-          <div class="box-right"></div>
-          <img src={bosslogo}/>
-          <video muted preload>
-              <source src={bossManVideo} type="video/mp4"/>
-          </video>
-        </div> */}
+          {/* <img src={light}/> */}
+
           <video autoPlay muted preload id='vid-boss'>
               <source src={bosslogo} type="video/mp4"/>
           </video>
