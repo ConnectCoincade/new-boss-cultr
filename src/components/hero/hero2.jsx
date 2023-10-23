@@ -9,11 +9,12 @@ const Hero = () => {
   const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
 
   useEffect(() => {
+    
     setTimeout(() => {
       // console.log('why');
       // document.getElementById('container-hero-sec').classList.remove("margin-top-hero");
       window.scrollTo(0, 0);
-    }, 300);
+    }, 250);
 
     setTimeout(() => {
       // console.log('test');
@@ -49,7 +50,7 @@ const Hero = () => {
       <div class="hero-container">
           {/* <img src={light}/> */}
 
-          <video autoPlay muted preload id='vid-boss'>
+          <video muted preload id='vid-boss'>
               <source src={bosslogo} type="video/mp4"/>
           </video>
         
