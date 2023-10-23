@@ -41,7 +41,7 @@ export default function List({ setSelected }) {
       <div className='h-16'></div>
        <h2 className='about-heading text-center'>About Bosses</h2>
        <div className='h-16'></div>
-      <div className="columns-2 md:columns-3 xl:columns-4 gap-4 container flex justify-between flex-row px-6">
+      <div className="columns-2 md:columns-3 xl:columns-4 gap-4 container flex justify-between flex-col px-6 md:flex-row">
         {items.map((item) => (
           
           <Card key={item.id} setSelected={setSelected} item={item} />

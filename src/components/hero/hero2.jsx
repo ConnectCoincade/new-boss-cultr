@@ -10,23 +10,23 @@ const Hero = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log('why');
+      // console.log('why');
       // document.getElementById('container-hero-sec').classList.remove("margin-top-hero");
       window.scrollTo(0, 0);
     }, 300);
 
     setTimeout(() => {
-      console.log('test');
+      // console.log('test');
       document.getElementById('boss-char').classList.add("scroll-boss");
       
     }, 1200);
 
 
     const handleScroll = event => {
-      console.log('window.scrollY->', window.scrollY);
+      // console.log('window.scrollY->', window.scrollY);
 
       if(window.scrollY >= 300) {
-        console.log('here 550');
+        // console.log('here 550');
         document.getElementById('vid-boss').style.display = "none"
         document.getElementById('vid-boss').pause()
       }

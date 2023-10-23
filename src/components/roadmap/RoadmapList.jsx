@@ -102,7 +102,7 @@ export default function RoadmapList({ setSelect }) {
     const {table} = mediaDataObj;   
 
   return (
-    <div className="roadmaplist" onClick={() => handleCardClick(cardItems[0])} >
+    <div className="roadmaplist" >
         <h3 className='roadmap-heading text-center'>Roadmap</h3>
         <div className='h-16'></div>
     <div className='relative'>
