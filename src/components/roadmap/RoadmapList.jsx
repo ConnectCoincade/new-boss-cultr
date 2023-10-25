@@ -69,6 +69,7 @@ const Card = ({ setSelect, item, key}) => {
  onMouseEnter={()=>setIsHovering(true)} onMouseLeave={()=>setIsHovering(false)}
  >
     {/* <Slide > */}
+   
     <div  className={`face front face-${item.id} front-${item.id} `}>
     <img className={`card card-${item.id}`} src={item.url} alt='card' />
     </div>
@@ -77,6 +78,7 @@ const Card = ({ setSelect, item, key}) => {
     <img  onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  src={item.urlOnHover} alt='' />
      {/* {isHovering && item.lock ? <img className="lock-img" src={cardBackLock} alt="lock" />:""} */}
     </div>
+  
     {/* </Slide> */}
 
 
@@ -85,11 +87,12 @@ const Card = ({ setSelect, item, key}) => {
         <div className="details shadow-2xl shadow-red-600 p-11 ">
           
           <h2 className='text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
-         <p className='text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
+          <p className='text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
           
         </div>
         </Fade>
       )}
+      
   </div>
   
 </Fade>
@@ -107,9 +110,9 @@ export default function RoadmapList({ setSelect }) {
         <div className='h-16'></div>
     <div className='relative'>
 
-     <div> <img className='w-full' src={table} alt="table" /> </div>
+     <div className="hidden lg:block"> <img className='w-full' src={table} alt="table" /> </div>
       
-     <div className='image-card flex justify-between absolute'>
+     <div className='sticky image-card flex justify-between flex-col md:flex-row md:absolute'>
         
         {cardItems.map((item,index) => (
         

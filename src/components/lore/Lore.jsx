@@ -3,7 +3,7 @@ import { mediaDataObj } from "../../data/constant";
 import './lore.css'
 
 const Lore = () => {
-  const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
+  const {  bossManVideo } = mediaDataObj;
 
 
   // const registerVideo = (bound, video) => {

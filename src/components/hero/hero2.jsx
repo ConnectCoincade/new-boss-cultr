@@ -6,7 +6,7 @@ import light from '../../assets/light.png'
 
 import './hero2.css'
 const Hero = () => {
-  const { bossManImg, bossManVideo, Dunes } = mediaDataObj;
+  const {  bossManVideo, Dunes } = mediaDataObj;
 
   useEffect(() => {
     
