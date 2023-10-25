@@ -1,3 +1,8 @@
 ion-icon {
     color: white;
   }
+  @media only screen and (max-width:768px){
+    .nav-ul{
+      background-color: black;
+    }
+  }

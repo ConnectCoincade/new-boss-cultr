@@ -3,16 +3,16 @@ import React ,{useState}from "react";
 import { motion } from "framer-motion";
 import './about.css';
 import { mediaDataObj } from '../../data/constant';
-import { Fade, JackInTheBox, Slide } from "react-awesome-reveal";
+import { Fade} from "react-awesome-reveal";
 
 const Card = ({ setSelected, item }) => {
 
   const [isHovering,setIsHovering] = useState(false)
  
   return (
-    <motion.div className="inline-block w-full mb-4" initial={{opacity:0,scale:0,x:500}} whileInView={{opacity:1,scale:1,x:0}} animate={{x:0}} >
+    <motion.div className="inline-block w-full mb-4" >
      
-     <Fade direction="right">
+     <Fade delay={200}>
       <motion.img
   
         whileTap={{
@@ -25,7 +25,6 @@ const Card = ({ setSelected, item }) => {
         onMouseEnter={()=>setIsHovering(true)}
         onMouseLeave={()=>setIsHovering(false)}
         src={isHovering ? item.urlOnHover: item.url}
-        // className={isHovering ? ` w-full shadow-${item.color}-600  cursor-pointer px-1 m-4 border-2`: `w-full bg-base-100 image-full cursor-pointer px-1 m-4`} 
         className={`image-hover-${item.id}`}
         
       />
