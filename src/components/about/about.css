@@ -122,6 +122,9 @@
         width: 70%;
     }
     .des-modal{
-        padding: 0;
+        
+    }
+    .modal-des-title{
+        font-size: 18px;
     }
 }

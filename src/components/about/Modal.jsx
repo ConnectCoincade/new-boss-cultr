@@ -18,7 +18,7 @@ export default function Modal({ selected, setSelected }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="px-0 mx-0 my-0 md:mx-10 md:my-20 md:px-5 flex-col lg:flex-row flex justify-between items-center cursor-default "
+        className="md:shrink-0 px-0 mx-0 my-0 md:mx-10 md:my-20 md:px-5 flex-col lg:flex-row flex justify-between items-center cursor-default "
       >
         <motion.div layoutId={`card-${selected.id}`}>
           <img className={`image-modal image-modal-${selected.id} max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl`} src={selected.urlOnHover} />
@@ -41,7 +41,7 @@ export default function Modal({ selected, setSelected }) {
         >
           <div className='rounded-xl m-4 max-w-[950px] '>
                     <div className='flex justify-between'>  
-                     <h3 className="text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>  
+                     <h3 className="modal-des-title md:text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>  
                      <div> 
                      <img  onClick={() => setSelected(null)}className='closeButton mr-5 cursor-pointer' src={closeButton} alt="closeButton"/>
                      </div>
