@@ -24,3 +24,8 @@
     white-space: nowrap;
     font-family: Agency FB;
   }
+  @media screen and (min-width: 360px) and (max-width: 415px) {
+    .faq-top-margin {
+      margin: 55vh auto;
+    }
+  }

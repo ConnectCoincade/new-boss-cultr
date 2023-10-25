@@ -15,6 +15,12 @@ const Card = ({ setSelect, item, key}) => {
   const [isHovering,setIsHovering] = useState(false)
 
   const handleCardClick = (selectedCard) => {
+    if(window.innerWidth <= 800 && !open) {
+      document.getElementById('faq-section').classList.add("faq-top-margin");
+    }
+    else {
+      document.getElementById('faq-section').classList.remove("faq-top-margin");
+    }
 
     const selectedIndex = cardItems.findIndex((item) => item.id === selectedCard.id);
     if(!selectedCard.lock){
@@ -83,7 +89,7 @@ const Card = ({ setSelect, item, key}) => {
 
     {selectedCard && (
       <Fade direction="right">
-        <div className="details shadow-2xl shadow-red-600 p-5 ">
+        <div className="details shadow-2xl shadow-red-600 p-5 faq-top-margin">
           
           <h2 className='text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
           <p className='text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
