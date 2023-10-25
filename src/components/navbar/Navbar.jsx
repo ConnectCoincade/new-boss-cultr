@@ -48,7 +48,7 @@ let Links = [
       <ion-icon className="decoration-red-600" name={open ? 'close':'menu'}></ion-icon>
       </div>
       {/* <ul className={`hidden md:flex md:items-center space-x-5 text-red-700 z-[-1] md:z-auto md:static lg:flex transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}> */}
-      <ul className={`bg-black  md:flex md:items-center md:pb-0 pb-12 pt-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-0 ':'top-[-490px]'}`}>
+      <ul className={`md:flex md:items-center md:pb-0 pb-12 pt-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-0 ':'top-[-490px]'}`}>
         {
           Links.map((link)=>(
             <li className=" md:ml-8 text-xl md:my-0 my-7 text-center cursor-pointer font-bold text-red-600 decoration-red-600 hover:text-gray-600 hover:underline hover:decoration-red-500" onClick={()=>scrollToSection(link.name)}>{link.nameLink}</li>
