@@ -61,7 +61,7 @@ const Navbar = (props) => {
       </div>
 
       <ul
-        className={`bg-black  md:flex md:items-center md:pb-0 pb-12 pt-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+        className={`nav-ul md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
           open ? 'top-0 ' : 'top-[-490px]'
         }`}
       >

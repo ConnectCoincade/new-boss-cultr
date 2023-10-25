@@ -25,7 +25,6 @@ const Card = ({ setSelected, item }) => {
         onMouseEnter={()=>setIsHovering(true)}
         onMouseLeave={()=>setIsHovering(false)}
         src={isHovering ? item.urlOnHover: item.url}
-        // className={isHovering ? ` w-full shadow-${item.color}-600  cursor-pointer px-1 m-4 border-2`: `w-full bg-base-100 image-full cursor-pointer px-1 m-4`} 
         className={`image-hover-${item.id}`}
         
       />
