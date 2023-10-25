@@ -26,7 +26,13 @@ const Hero = () => {
     const handleScroll = event => {
       // console.log('window.scrollY->', window.scrollY);
 
-      if(window.scrollY >= 300) {
+
+      if(window.scrollY >= 300 && window.innerWidth >= 800 ) {
+        // console.log('here 550');
+        document.getElementById('vid-boss').style.display = "none"
+        document.getElementById('vid-boss').pause()
+      }
+      else if(window.scrollY >= 50 && window.innerWidth <= 800 ) {
         // console.log('here 550');
         document.getElementById('vid-boss').style.display = "none"
         document.getElementById('vid-boss').pause()
@@ -50,7 +56,7 @@ const Hero = () => {
       <div class="hero-container">
           {/* <img src={light}/> */}
 
-          <video muted preload id='vid-boss'>
+          <video autoPlay muted preload id='vid-boss'>
               <source src={bosslogo} type="video/mp4"/>
           </video>
         
