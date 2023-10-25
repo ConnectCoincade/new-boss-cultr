@@ -1,6 +1,5 @@
 
 import React ,{useState}from "react";
-import { motion } from "framer-motion";
 import { mediaDataObj } from '../../data/constant';
 import { cardItems } from "../../data/constant2";
 import './roadmap.css';
@@ -62,12 +61,12 @@ const Card = ({ setSelect, item, key}) => {
   return (
     <>
     < Fade direction="up">
- <div   
- key={key} id={item.id}
- className={`card card-${item.id} cursor-pointer ${selectedCard === item ? 'selected' : ''}`}
- onClick = {()=>handleCardClick(item)}
- onMouseEnter={()=>setIsHovering(true)} onMouseLeave={()=>setIsHovering(false)}
- >
+      <div   
+      key={key} id={item.id}
+      className={`card card-${item.id} cursor-pointer ${selectedCard === item ? 'selected' : ''}`}
+      onClick = {()=>handleCardClick(item)}
+      onMouseEnter={()=>setIsHovering(true)} onMouseLeave={()=>setIsHovering(false)}
+      >
     {/* <Slide > */}
    
     <div  className={`face front face-${item.id} front-${item.id} `}>
