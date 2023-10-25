@@ -19,8 +19,16 @@ const Card = ({ setSelect, item, key}) => {
       document.getElementById('faq-section').classList.add("faq-top-margin");
     }
     else {
+      console.log('yoyo');
       document.getElementById('faq-section').classList.remove("faq-top-margin");
+
+      debugger
+      document.querySelector(".card-1 .face-1.back-1").style.transform = "perspective(500px) rotateY(180deg)";
+      document.querySelector(".card-1 .face-1.back-1").style.transform = "perspective(500px) rotateY(360deg)";
+      document.querySelector(".card-1 .face-1.front-1").style.transform = "perspective(500px) rotateY(180deg)";
     }
+
+
 
     const selectedIndex = cardItems.findIndex((item) => item.id === selectedCard.id);
     if(!selectedCard.lock){
