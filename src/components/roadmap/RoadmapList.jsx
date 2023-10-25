@@ -60,7 +60,7 @@ const Card = ({ setSelect, item, key}) => {
 
   return (
     <>
-    < Fade direction="up">
+    <Fade direction="up">
       <div   
       key={key} id={item.id}
       className={`card card-${item.id} cursor-pointer ${selectedCard === item ? 'selected' : ''}`}
@@ -83,7 +83,7 @@ const Card = ({ setSelect, item, key}) => {
 
     {selectedCard && (
       <Fade direction="right">
-        <div className="details shadow-2xl shadow-red-600 p-11 ">
+        <div className="details shadow-2xl shadow-red-600 p-5 ">
           
           <h2 className='text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
           <p className='text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>

@@ -100,8 +100,22 @@
     justify-content: space-between;
     align-items: center;
 }
-@media screen and (min-width: 360px) and (max-width: 415px) {
+@media screen and (min-width: 360px) and (max-width: 576px) {
     .roadmap-heading {
         font-size: 1.5rem;
+    }
+    .details{
+        position: static;
+        bottom:0;
+        /* top: 0px; */
+        /* bottom: -0px; */
+        /* bottom: 100px; */
+        width: 100%;
+        margin-top: 160%;
+    }
+    .img-card-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
