@@ -95,9 +95,33 @@
     border: 1px solid red;
     box-shadow:1px 10px 30px 5px red;
 }
+.closeButton{
+    width:50px
+}
 @keyframes cursor{
     50%{ border-color: transparent;}
 }
 @keyframes typing{
     from {width: 0;}
+}
+
+@media only screen and (max-width:1200px){
+
+    .closeButton{
+        width: 40px;
+    }
+    .image-modal{
+        width: 80%;
+    }
+    .des-modal{
+        padding: 0;
+    }
+}
+@media only screen and (max-width:768px){
+    .image-modal{
+        width: 70%;
+    }
+    .des-modal{
+        padding: 0;
+    }
 }

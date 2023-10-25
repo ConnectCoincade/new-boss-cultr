@@ -18,10 +18,10 @@ export default function Modal({ selected, setSelected }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="flex-col md:flex-row flex justify-between mx-10 my-20 px-5 cursor-default "
+        className="px-0 mx-0 my-0 md:mx-10 md:my-20 md:px-5 flex-col lg:flex-row flex justify-between items-center cursor-default "
       >
         <motion.div layoutId={`card-${selected.id}`}>
-          <img className={`image-modal-${selected.id} max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl`} src={selected.urlOnHover} />
+          <img className={`image-modal image-modal-${selected.id} max-w-[550px] backdrop-blur-xl p-5 ml-12 rounded-xl`} src={selected.urlOnHover} />
         </motion.div>
         <motion.div
           
@@ -37,18 +37,19 @@ export default function Modal({ selected, setSelected }) {
           transition={{
             duration: 0.5,
           }}
-          className="bg-black p-10"
+          className="des-modal sm:p-5 md:p-10 bg-black "
         >
           <div className='rounded-xl m-4 max-w-[950px] '>
                     <div className='flex justify-between'>  
-                     <h3 className="text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>   
-                     <img  onClick={() => setSelected(null)}className='w-10 mr-5 cursor-pointer' src={closeButton} alt="closeButton"/>
+                     <h3 className="text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>  
+                     <div> 
+                     <img  onClick={() => setSelected(null)}className='closeButton mr-5 cursor-pointer' src={closeButton} alt="closeButton"/>
+                     </div>
                      </div>
                      <div className="para">
                     <p className='text-cream-500 font-bold text-lg py-10 '>{selected.description}</p>
                     </div>
                     </div>
-      
         </motion.div>
       </div>
     </div>
