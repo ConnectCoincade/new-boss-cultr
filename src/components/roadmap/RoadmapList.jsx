@@ -100,13 +100,13 @@ const Card = ({ setSelect, item, key}) => {
   
     {/* </Slide> */}
 
-
+   
     {selectedCard && (
       <Fade direction="right">
         <div className="details shadow-2xl shadow-red-600 p-5 faq-top-margin">
           
-          <h2 className='text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
-          <p className='text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
+          <h2 className='text-xl md:text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
+          <p className='text-sm md:text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
           
         </div>
         </Fade>

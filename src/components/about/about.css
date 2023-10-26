@@ -35,38 +35,11 @@
 .image-front{
     position: absolute;
 }
-.box:hover{
-    
-    transform: scale(1.0);
-    z-index: 1;
-    /* background: black; */
-    /* border-color: red; */
-    /* background: re; */
-    /* border: 10px solid red; */
-}
-.image-front:hover{
-    
-    opacity: 0;
-    /* transition: opacity 0.5s ease-in-out; */
-    /* z-index: ; */
-}
-.image-hover-1:hover{
-    box-shadow: blue;
-}
+
+
 
 .para{
     display: inline-block;
-}
-.text{
-    /* font-size: 5rem; */
-    /* letter-spacing: 10px; */
-    border-right: 5px solid;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: 
-      typing 5s ,
-      cursor .4s step-end infinite alternate;
 }
 .image-hover-1:hover {
     box-shadow:1px 10px 30px 5px blue;
@@ -117,9 +90,6 @@
     .closeButton{
         width: 40px;
     }
-    /* .image-modal{
-        width: 85%;
-    } */
     .modal-description{
         padding: 0;
         width: 690px;

@@ -42,7 +42,7 @@ const Navbar = (props) => {
       variants={{ visible: { y: 0 }, hidden: { y: '-100%' } }}
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="shadow-red-500 fixed w-full h-[50px] flex justify-between items-center px-4 bg-[stone] text-black z-10"
+      className="shadow-red-500 fixed w-full h-[50px] flex justify-between items-center px-4 bg-[black] text-black z-10"
     >
       <div onClick={scrollToTop}>
         <img
@@ -68,7 +68,11 @@ const Navbar = (props) => {
         {Links.map((link) => (
           <li
             key={link.name} // Make sure to add a unique key for each list item
+<<<<<<< HEAD
+            className="md:ml-8 text-xl md:my-0 my-7 text-center cursor-pointer font-bold text-red-600 decoration-red-600 hover:text-white hover:decoration-red-500"
+=======
             className="md:ml-8 text-xl md:my-0 my-7 text-center cursor-pointer font-bold text-red-600  decoration-red-600 hover:text-white  hover:decoration-red-500"
+>>>>>>> a2b40da7d4f9c7a2c5af756898022554787aa44b
             onClick={() => {
               scrollToSection(link.name);
               closeMobileMenu(); 

@@ -14,7 +14,7 @@ const Accordion = ({question,htmlContent}) => {
             </button>
             <div className='faqs-ans'>
               
-             {show && <Fade>
+             {show && <Fade >
               
             
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }}/>
