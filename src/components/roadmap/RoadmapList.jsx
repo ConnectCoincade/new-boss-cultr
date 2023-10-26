@@ -22,10 +22,18 @@ const Card = ({ setSelect, item, key}) => {
       console.log('yoyo');
       document.getElementById('faq-section').classList.remove("faq-top-margin");
 
-      debugger
-      document.querySelector(".card-1 .face-1.back-1").style.transform = "perspective(500px) rotateY(180deg)";
-      document.querySelector(".card-1 .face-1.back-1").style.transform = "perspective(500px) rotateY(360deg)";
-      document.querySelector(".card-1 .face-1.front-1").style.transform = "perspective(500px) rotateY(180deg)";
+      
+    }
+    if(window.innerWidth <= 576 && open) {
+
+      document.querySelector(".card-1 .face-1.front-1").style.transform = "rotateY(360deg)";
+      document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(360deg)";
+      document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(180deg)";
+    }
+    else if(window.innerWidth <= 576 && !open){
+      document.querySelector(".card-1 .face-1.front-1").style.transform = "rotateY(180deg)";
+      document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(180deg)";
+      document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(360deg)";
     }
 
 
