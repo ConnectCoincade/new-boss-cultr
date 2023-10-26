@@ -100,6 +100,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/*  For Responsive - code                   */
 @media screen and (min-width: 360px) and (max-width: 576px) {
     .roadmap-heading {
         font-size: 1.5rem;
@@ -127,3 +129,52 @@
     }
     
 }
+
+/* Responsive Part For General iPad-Mini layouts      */
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+
+    .image-card{
+
+        width: 65%;
+        bottom: 32%;
+        left: 18%;
+    }
+    .card{
+    
+        padding: 5px;
+        position: relative;
+        width:100px;
+        height: 170px;
+        transform-style: preserve-3d;
+    }
+    .details{
+        left: 130px;
+        width: 380px;
+        top: -70px;
+    }
+}
+
+  /* For landscape layouts only */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .image-card{
+
+        width: 70%;
+        bottom: 31%;
+        left: 16%;
+    }
+    .card{
+    
+        padding: 2px;
+        position: relative;
+        width:150px;
+        height: 250px;
+        transform-style: preserve-3d;
+    }
+    .details{
+        left: 250px;
+        width: 500px;
+        top: -30px;
+    }
+  }
+
+
