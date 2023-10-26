@@ -16,7 +16,7 @@ const Card = ({ setSelected, item }) => {
       <motion.img
   
         whileTap={{
-          // scale: 0.95,
+          // scale: 2.00,
         }}
         onClick={() => {
           setSelected(item);

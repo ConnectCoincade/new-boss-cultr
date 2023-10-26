@@ -7,6 +7,20 @@ export default function Modal({ selected, setSelected }) {
 
   const {closeButton} = mediaDataObj;
 
+  useEffect(() => {
+    if (selected) {
+      // Store the current scroll position
+      // scrollPositionRef.current = window.scrollY;
+      // Prevent body scrolling when the modal is open
+      document.body.style.overflow = "hidden";
+      
+    } else {
+      // Restore body scrolling when the modal is closed
+      document.body.style.overflow = "auto";
+      // document.body.style.position = "relative";
+    }
+  }, [selected]);
+  
   if (!selected) {
     return <></>;
   }
@@ -41,7 +55,7 @@ export default function Modal({ selected, setSelected }) {
         >
           <div className='modal-des rounded-xl m-4 w-full'>
                     <div className='flex justify-between'>  
-                     <h3 className="modal-des-title md:text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>  
+                     <h3 className=" text-center modal-des-title md:text-2xl uppercase font-bold text-cream-600 underline decoration-red-600 hover:decoration-gray-400">{selected.title}</h3>  
                      <div> 
                      <img  onClick={() => setSelected(null)}className='closeButton mr-5 cursor-pointer' src={closeButton} alt="closeButton"/>
                      </div>

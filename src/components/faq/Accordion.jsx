@@ -14,7 +14,7 @@ const Accordion = ({question,htmlContent}) => {
             </button>
             <div className='faqs-ans'>
               
-             {show && <Fade direction='up'>
+             {show && <Fade >
               
             
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }}/>
