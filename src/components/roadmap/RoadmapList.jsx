@@ -3,7 +3,7 @@ import React ,{useState}from "react";
 import { mediaDataObj } from '../../data/constant';
 import { cardItems } from "../../data/constant2";
 import './roadmap.css';
-import { Fade,Bounce,Flip,Hinge,JackInTheBox,Roll,Rotate,Slide,Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 
 
@@ -115,7 +115,7 @@ export default function RoadmapList({ setSelect }) {
         <div className='h-16'></div>
     <div className='relative'>
 
-     <div className="hidden lg:block"> <img className='w-full' src={table} alt="table" /> </div>
+     <div className="hidden md:block"> <img className='w-full' src={table} alt="table" /> </div>
       
      <div className='sticky image-card flex justify-between flex-col md:flex-row md:absolute'>
         
