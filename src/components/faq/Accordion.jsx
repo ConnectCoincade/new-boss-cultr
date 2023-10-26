@@ -6,7 +6,7 @@ const Accordion = ({question,htmlContent}) => {
     const [show, setShow] = useState(false);
   return (
     <>
-    <Fade direction='right'>
+    <Fade direction='right' damping={0.1}>
      <div className='faqs-data' >
             <button className='faqs-que' onClick={()=>setShow(!show)}>
             {question}
