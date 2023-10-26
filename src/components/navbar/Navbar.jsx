@@ -68,7 +68,11 @@ const Navbar = (props) => {
         {Links.map((link) => (
           <li
             key={link.name} // Make sure to add a unique key for each list item
+<<<<<<< HEAD
             className="md:ml-8 text-xl md:my-0 my-7 text-center cursor-pointer font-bold text-red-600 decoration-red-600 hover:text-white hover:decoration-red-500"
+=======
+            className="md:ml-8 text-xl md:my-0 my-7 text-center cursor-pointer font-bold text-red-600  decoration-red-600 hover:text-white  hover:decoration-red-500"
+>>>>>>> a2b40da7d4f9c7a2c5af756898022554787aa44b
             onClick={() => {
               scrollToSection(link.name);
               closeMobileMenu(); 
