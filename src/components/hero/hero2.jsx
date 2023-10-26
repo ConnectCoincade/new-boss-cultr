@@ -3,13 +3,12 @@ import { mediaDataObj } from '../../data/constant';
 import bossChar from '../../assets/Bossman_smoke.gif'
 import bosslogo from '../../assets/BossCultr Logo animation.mp4'
 import light from '../../assets/light.png'
-
 import './hero2.css'
 const Hero = () => {
   const {  bossManVideo, Dunes } = mediaDataObj;
 
   useEffect(() => {
-    
+    console.log('window.innerHeight->', window.innerHeight)
     setTimeout(() => {
       // console.log('why');
       // document.getElementById('container-hero-sec').classList.remove("margin-top-hero");
@@ -24,20 +23,26 @@ const Hero = () => {
 
 
     const handleScroll = event => {
-      // console.log('window.scrollY->', window.scrollY);
-
-
-      if(window.scrollY >= 300 && window.innerWidth >= 800 ) {
-        // console.log('here 550');
-        document.getElementById('vid-boss').style.display = "none"
+      
+      if(window.scrollY >= 300 && window.innerWidth >= 1024) {
+        console.log('desktop');
         document.getElementById('vid-boss').pause()
+        document.getElementById('vid-boss').style.display = "none"
+        
       }
-      else if(window.scrollY >= 50 && window.innerWidth <= 800 ) {
-        // console.log('here 550');
-        document.getElementById('vid-boss').style.display = "none"
+      else if(window.scrollY >= 200 && (window.innerWidth >= 801 && window.innerWidth <= 1024)) {
+        console.log('ipad');
         document.getElementById('vid-boss').pause()
+        document.getElementById('vid-boss').style.display = "none"
+        
+      }
+      else if(window.scrollY >= 20 && window.innerWidth <= 800)  {
+        console.log('mobile');
+          document.getElementById('vid-boss').pause()
+          document.getElementById('vid-boss').style.display = "none"
       }
       else {
+        console.log('here else');
         document.getElementById('vid-boss').style.display = "block"
         document.getElementById('vid-boss').play()
       }

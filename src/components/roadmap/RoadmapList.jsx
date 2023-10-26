@@ -21,8 +21,6 @@ const Card = ({ setSelect, item, key}) => {
     else {
       console.log('yoyo');
       document.getElementById('faq-section').classList.remove("faq-top-margin");
-
-      
     }
     if(window.innerWidth <= 576 && open) {
 

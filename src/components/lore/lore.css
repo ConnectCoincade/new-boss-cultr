@@ -21,3 +21,6 @@
   .scroll-bound video {
     width: 100%;
   }
+  #bound-two {
+    height: 100vh;
+  }
