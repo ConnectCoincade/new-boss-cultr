@@ -13,11 +13,11 @@ const Card = ({ setSelect, item, key}) => {
   const [selectedCard, setSelectedCard] = useState(null);
   const [open,setOpen] = useState(false);
   const [isHovering,setIsHovering] = useState(true);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 800);
+      setIsMobile(window.innerWidth <= 767);
     };
 
     window.addEventListener("resize", handleResize);
@@ -32,9 +32,7 @@ const Card = ({ setSelect, item, key}) => {
       document.getElementById('faq-section').classList.add("faq-top-margin");
     }
     else {
-     
       document.getElementById('faq-section').classList.remove("faq-top-margin");
-  
     }
     if(window.innerWidth <= 576 && open) {
    
@@ -43,8 +41,6 @@ const Card = ({ setSelect, item, key}) => {
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(180deg)";
     }
     else if(window.innerWidth <= 576 && !open){
-      // setDisplayForMobile(false);
-    
       document.querySelector(".card-1 .face-1.front-1").style.transform = "rotateY(180deg)";
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(180deg)";
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(360deg)";
@@ -61,7 +57,10 @@ const Card = ({ setSelect, item, key}) => {
         if (index !== selectedIndex) {
           const card = document.getElementById(item.id);
           if (card && !open) {
-  
+
+              if(isMobile){
+                card.style.display = "block";
+              }
               card.style.transform = `translateX(${translateXValue})`;
               card.style.transition = "all 2s ease-out";
               setTimeout(()=>{  
@@ -80,7 +79,7 @@ const Card = ({ setSelect, item, key}) => {
           }
         }
       });
-         console.log(isMobile);
+
          !open  ? setSelectedCard(item) : setSelectedCard(null);
     }else{
         // cardItems.forEach((item,index)=>{
@@ -112,7 +111,7 @@ const Card = ({ setSelect, item, key}) => {
     
     <div className={`face back face-${item.id} back-${item.id}`}>
     <picture>
-      <source media="(max-width:800px)" onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  srcSet={item.cardForMobile} alt="card" />
+      <source media="(max-width:767px)" onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  srcSet={item.cardForMobile } alt="card" />
     <img  onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  src={item.urlOnHover} alt='' />
     </picture>
     </div>

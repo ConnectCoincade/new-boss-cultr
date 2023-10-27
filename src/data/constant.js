@@ -8,7 +8,7 @@ import title from '../assets/lifestyle text.mp4';
 import Logo from '../assets/BossCultr Logo white.png';
 import logo from "../assets/BossCultr Logo white.png";
 import bossManImg from '../assets/bossMan.png';
-import bossManVideo from '../assets/BG 2 final.mp4';
+import bossManVideo from '../assets/BG slowed V2.mp4';
 import BossPicture1 from '../assets/Boss1.png';
 import BossPicture2 from '../assets/Boss2.png'
 import BossPicture3 from '../assets/Boss3.png'

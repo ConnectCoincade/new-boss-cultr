@@ -37,7 +37,7 @@ export default function List({ setSelected }) {
  
   return (
     <div className=""  >
-      <div className='h-16'></div>
+      <div className='h-1 lg:h-64'></div>
        <h2 className='about-heading text-center'>About Bosses</h2>
        <div className='h-16'></div>
       <div className="list-boss columns-2 md:columns-3 xl:columns-4 gap-4 container flex justify-between flex-col lg:flex-row px-6">
