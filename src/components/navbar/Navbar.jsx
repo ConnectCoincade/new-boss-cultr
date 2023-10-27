@@ -42,7 +42,7 @@ const Navbar = (props) => {
       variants={{ visible: { y: 0 }, hidden: { y: '-100%' } }}
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="shadow-red-500 fixed w-full h-[50px] flex justify-between items-center px-4 bg-[black] text-black z-10"
+      className="navBar shadow-red-500 fixed w-full h-[50px] flex justify-between items-center px-4 bg-[black] text-black z-10"
     >
       <div onClick={scrollToTop}>
         <img
