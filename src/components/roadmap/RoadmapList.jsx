@@ -1,5 +1,5 @@
 
-import React ,{useState}from "react";
+import React ,{useState, useEffect}from "react";
 import { mediaDataObj } from '../../data/constant';
 import { cardItems } from "../../data/constant2";
 import './roadmap.css';
@@ -12,23 +12,39 @@ const Card = ({ setSelect, item, key}) => {
   const { lock, cardBackLock} = mediaDataObj
   const [selectedCard, setSelectedCard] = useState(null);
   const [open,setOpen] = useState(false);
-  const [isHovering,setIsHovering] = useState(false)
+  const [isHovering,setIsHovering] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleCardClick = (selectedCard) => {
     if(window.innerWidth <= 800 && !open) {
       document.getElementById('faq-section').classList.add("faq-top-margin");
     }
     else {
-      console.log('yoyo');
+     
       document.getElementById('faq-section').classList.remove("faq-top-margin");
+  
     }
     if(window.innerWidth <= 576 && open) {
-
+   
       document.querySelector(".card-1 .face-1.front-1").style.transform = "rotateY(360deg)";
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(360deg)";
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(180deg)";
     }
     else if(window.innerWidth <= 576 && !open){
+      // setDisplayForMobile(false);
+    
       document.querySelector(".card-1 .face-1.front-1").style.transform = "rotateY(180deg)";
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(180deg)";
       document.querySelector(".card-1 .face-1.back-1").style.transform = "rotateY(360deg)";
@@ -64,7 +80,8 @@ const Card = ({ setSelect, item, key}) => {
           }
         }
       });
-         !open? setSelectedCard(item) : setSelectedCard(null);
+         console.log(isMobile);
+         !open  ? setSelectedCard(item) : setSelectedCard(null);
     }else{
         // cardItems.forEach((item,index)=>{
         //   if(index === selectedIndex){
@@ -94,21 +111,26 @@ const Card = ({ setSelect, item, key}) => {
     </div>
     
     <div className={`face back face-${item.id} back-${item.id}`}>
+    <picture>
+      <source media="(max-width:800px)" onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  srcSet={item.cardForMobile} alt="card" />
     <img  onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  src={item.urlOnHover} alt='' />
-     {/* {isHovering && item.lock ? <img className="lock-img" src={cardBackLock} alt="lock" />:""} */}
+    </picture>
     </div>
   
     {/* </Slide> */}
 
-   
+    
     {selectedCard && (
       <Fade direction="right">
-        <div className="details shadow-2xl shadow-red-600 p-5 faq-top-margin">
+        { isMobile ? 
+         "" :
+       ( <div className="details shadow-2xl shadow-red-600 p-5 faq-top-margin">
           
           <h2 className='text-xl md:text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
           <p className='text-sm md:text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
           
-        </div>
+        </div>)
+          }
         </Fade>
       )}
       

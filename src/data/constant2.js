@@ -16,12 +16,14 @@ import cardBack5 from '../assets/3x/Asset5-back.png';
 import cardBack6 from '../assets/3x/Asset6-back.png';
 import cardBack7 from '../assets/3x/Asset7-back.png';
 import cardBackLock from '../assets/3x/Asset8-back-lock.png';
+import cardForMobile from '../assets/3x/cardForMobile.png'
 
 export const items = [
     {
       id: 1,
       url: boss1,
       urlOnHover:bossOnHover1,
+      cardForMobile:cardForMobile,
       title:`Nova Starling (Blue Nomad Syndicate)`,
       description:`Visionary leader of the freedom-loving Nomad Syndicate. Drives the advanced "Quasar" customized to push the limits. Cares for members but hides a simmering rage at defeat. Relies on cunning and technical creativity to beat rivals.`,
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
@@ -53,6 +55,7 @@ export const items = [
       url: cardBack5,
       urlOnHover:kingCard1,
       title: "PHASE-I",
+      cardForMobile:cardForMobile,
       description: `<li>Opening of discord to public</li>
       <li>Twitter marketing campaign</li>
       <li>Collab with top Projects Daos</li>
