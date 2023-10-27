@@ -11,7 +11,7 @@ import AnimatedCursor from "react-animated-cursor";
 import Loader from '../../container/Loader/Loader';
 import '../home/home.css'
 const Home = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [refData, setRefData] = useState('')
 
   const hero = useRef(null);
