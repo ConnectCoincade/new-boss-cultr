@@ -2,7 +2,7 @@ ion-icon {
     color: white;
   }
   .navBar{
-    margin:-5px
+    margin-top:-5px
   }
   @media only screen and (max-width:768px){
     .nav-ul{
