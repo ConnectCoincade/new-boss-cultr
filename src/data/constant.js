@@ -72,6 +72,7 @@ export const mediaDataObj = {
     cardBackLock,
     faqs: [
            {
+            id:1,
             que :"What is Bosscultr?",
             htmlContent:`<p>Bosscultr is a premium NFT collection focused on exclusive membership and Cultrverse perks powered by NFTs on Ethereum Blockchain.<br/><br/>
              Launching with 3 months of quality first content, the project will feature, among many other things.<br/><br/>The NFTs are based around a narrative of powerful Boss characters having a past as a legendary retro racer. Banned from racing due to his misleading behavior, after years he returned to take revenge on the one who stopped him from doing race again with a multiversal boss help, leading to the multiverse collision. 
@@ -89,12 +90,15 @@ export const mediaDataObj = {
               </ul>
               `         
             },
-           {que:"What is the roadmap for Bosscultr?",
+           {id:2,
+            que:"What is the roadmap for Bosscultr?",
            htmlContent:`We have imagined Bosscultr like a series, divided into multiple seasons. Season 1 will be starting on the day of the mint, with a game launch.<br/><br/>
            Season 2 will begin soon after. We will engage with our community of Bossman throughout the process in order to make sure our ambitions match those of our holders.<br/><br/>
            Our intent is to turn Bosscultr into a company bridging the digital and physical worlds and develop into a fully-fledged brand & license.
            `},
-           {que:"What are the Syndicates?",
+           {
+            id:3,
+            que:"What are the Syndicates?",
            htmlContent:`
             <p> In the thrilling world of Bosscultr, three powerful syndicates rule the retro racing domain, each with its own distinct identity and goals.</p>
             <br/>
@@ -113,27 +117,35 @@ export const mediaDataObj = {
             <p> As a participant in the Bosscultr storyline, you will align yourself with one of these syndicates member. Each syndicate offers its own set of advantages and challenges, and your fate will be intertwined with the events that unfold as you navigate the high-stakes world of retro racing.</p>
              ` 
             },
-           {que:"When Mint?",
+           {id:4,
+            que:"When Mint?",
             htmlContent:"We do not want to give an exact date at the moment as we have to make sure that everything is 100% ready before launch."},
 
-           {que:"Where can I follow for updates?",
+           {id:5,
+            que:"Where can I follow for updates?",
            htmlContent:"Bosscultr will be mostly active on Twitter and Discord, but will soon be available on Instagram and YouTube."},
 
-           {que:"What is the minting process and price?",
+           {id:6,
+            que:"What is the minting process and price?",
             htmlContent:"We are still exploring different options and we keep the community posted as soon as possible. We want to make sure to have a minting experience that is both fair and smooth."},
 
-           {que:`What is an "OG Member"?`,
+           {id:7,
+            que:`What is an "OG Member"?`,
            htmlContent:"A OG Member is only available for the Bosscultr team and Early loyal members of the Bosscultr Fam. An OG member will get an airdrop of an actual Boss Man Nft at the time of MINT, And exclusive access to the Bossman Inner Circle Communities."},
 
-           {que:"How to become an “OG” Member?",
+           {id:8,
+            que:"How to become an “OG” Member?",
            htmlContent:`Actively engage within the bossman community for OG member challenges and giveaways.
            The winners from those challenges and giveaways will be offered an OG role.
            `},
 
-           {que:"What will be the secondary markets?", 
+           {id:9,
+            que:"What will be the secondary markets?", 
            htmlContent:"After mint, the Bosscultr NFTs will be available on OpenSea and LooksRare, as well as other relevant platforms at the time."},
            
-           {que:`How can I get a "WhiteList"?`,
+           {
+            id:10,
+            que:`How can I get a "WhiteList"?`,
             htmlContent:`At the moment, the only "WhiteList" spots being given are through partnerships with other projects and Giveaways.<br/>
             Whatever happens we will recognize the people who are really interested in Bosscultr.
             `}

@@ -22,7 +22,7 @@ const Home = () => {
 
   const handleSkip = () => {
     setLoading(false);
-    console.log("skipp");
+    // console.log("skipp");
   };
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const Home = () => {
   switch (sectionName) {
     case "hero":
       sectionRef = hero;
-      console.log("hero");
+      // console.log("hero");
     case "lore":
       sectionRef = lore;
       break;

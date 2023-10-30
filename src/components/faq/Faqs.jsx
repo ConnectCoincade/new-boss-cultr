@@ -1,13 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { mediaDataObj } from '../../data/constant';
 import './faq.css';
 import Accordion from './Accordion';
 const Faqs = () => {
   const {faqs} = mediaDataObj;
 
-  const handleHide = (e) =>{
-    console.log(e);
-  }
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    if (openFaqIndex === index) {
+      // Clicked on an open FAQ, so close it
+      setOpenFaqIndex(null);
+    } else {
+      // Clicked on a closed FAQ, so open it
+      setOpenFaqIndex(index);
+    }
+  };
 
   return (
   <>
@@ -21,7 +29,14 @@ const Faqs = () => {
     <div>
       {faqs.map((data,index)=>{
         return (
-         <Accordion question={data.que} key={index} htmlContent={data.htmlContent} />
+         <Accordion  
+         key={index} 
+         id={data.id}
+         question={data.que} 
+         htmlContent={data.htmlContent}
+         isOpen={index === openFaqIndex}
+         toggleFaq={() => toggleFaq(index)}
+         />
           )
       })}
     </div>

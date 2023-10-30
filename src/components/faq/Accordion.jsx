@@ -2,22 +2,26 @@ import React, { useState } from 'react';
 import './faq.css'
 import { Rotate ,Bounce, Fade} from 'react-awesome-reveal';
 
-const Accordion = ({question,htmlContent}) => {
+const Accordion = ({question,htmlContent,isOpen, toggleFaq}) => {
     const [show, setShow] = useState(false);
+    const handleShow = (e) =>{
+      setShow((prevShow) => !prevShow)
+    }
   return (
     <>
     <Fade direction='right' >
      <div className='faqs-data' >
-            <button className='faqs-que' onClick={()=>setShow(!show)}>
+            <button className='faqs-que' onClick={toggleFaq}>
             {question}
-            {show ? <i className='fa-solid fa-chevron-up' /> : <i className='fa-solid fa-chevron-down' /> }
+            {isOpen ? <i className='fa-solid fa-chevron-up' /> : <i className='fa-solid fa-chevron-down' /> }
             </button>
             <div className='faqs-ans'>
               
-             {show && <Fade >
+             {isOpen && 
+             <Fade >
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }}/>
-                
-              </Fade> } 
+              </Fade> 
+              } 
              
             </div>
      </div>

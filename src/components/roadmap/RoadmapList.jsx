@@ -113,6 +113,12 @@ const Card = ({ setSelect, item, key}) => {
     <picture>
       <source media="(max-width:767px)" onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  srcSet={item.cardForMobile } alt="card" />
     <img  onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  src={item.urlOnHover} alt='' />
+    {/* <img
+    srcset={`${item.cardForMobile} 48w, ${item.urlOnHover} 1w`}
+  sizes="(max-width: 767px) 480px,
+         800px"
+  onClick={() => { setSelect(item)}}  className={`card card-${item.id}`} id={`img-${item.id}`}  src={item.urlOnHover} alt=''       
+  /> */}
     </picture>
     </div>
   
