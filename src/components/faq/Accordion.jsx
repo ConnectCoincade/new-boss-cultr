@@ -3,10 +3,7 @@ import './faq.css'
 import { Rotate ,Bounce, Fade} from 'react-awesome-reveal';
 
 const Accordion = ({question,htmlContent,isOpen, toggleFaq}) => {
-    const [show, setShow] = useState(false);
-    const handleShow = (e) =>{
-      setShow((prevShow) => !prevShow)
-    }
+    
   return (
     <>
     <Fade direction='right' >
