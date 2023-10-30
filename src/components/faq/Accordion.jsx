@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './faq.css'
 import { Rotate ,Bounce, Fade} from 'react-awesome-reveal';
 
