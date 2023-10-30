@@ -46,17 +46,6 @@
     transform: perspective(500px) rotateY(0deg);
 }
 
-/*
-.card:hover .face.front{
-    transform: perspective(500px) rotateY(180deg);
-}
-.card .face.back{
-    transform: perspective(500px) rotateY(180deg);
-}
-.card:hover .face.back{
-    transform: perspective(500px) rotateY(360deg);
-} 
-*/
  
 .card-1:hover .face-1.front-1{
     transform: perspective(500px) rotateY(180deg);
@@ -68,9 +57,6 @@
     transform: perspective(500px) rotateY(360deg);
 } 
 
-/* #img-2, #img-3, #img-4:hover{
-    opacity: 0.3;
-} */
 .card-2:hover{
     opacity: 0.3;
 }
