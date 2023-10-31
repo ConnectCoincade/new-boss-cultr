@@ -61,7 +61,7 @@ export default function Modal({ selected, setSelected }) {
                      </div>
                      </div>
                      <div className="para">
-                    <p className='text-cream-500 font-bold text-lg py-10 '>{selected.description}</p>
+                    <p className='para-text text-cream-500 font-bold text-lg py-10 '>{selected.description}</p>
                     </div>
                     </div>
         </motion.div>

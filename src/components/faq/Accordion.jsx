@@ -6,7 +6,7 @@ const Accordion = ({question,htmlContent,isOpen, toggleFaq}) => {
     
   return (
     <>
-    <Fade direction='right' >
+    <Fade direction='down' >
      <div className='faqs-data' >
             <button className='faqs-que' onClick={toggleFaq}>
             {question}

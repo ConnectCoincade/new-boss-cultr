@@ -52,9 +52,11 @@
   display: none !important;
 }
 .copyrights {
+  font-family: Agency B;
+  letter-spacing: 1.2px;
   color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 17px;
 }
 @media (max-width: 576px) {
   .Footer-Col button {

@@ -6,17 +6,21 @@
     width: 100%;
 }
 .roadmap-heading{
-  
-        font-size: 60px;
+        font-family: Agency B;
+        font-size: 80px;
         text-transform: uppercase;
         font-weight: 900;
         margin-right: 100px;
         color: #f74f58;
-        font-family: sans-serif;
         margin-left:100px ;
     
 }
-
+.details-heading{
+    font-family: Agency B;
+}
+.details-des{
+    font-family: Agency R;
+}
 .image-card{
 
     width: 70%;

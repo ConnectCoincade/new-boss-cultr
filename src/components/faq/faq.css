@@ -6,11 +6,11 @@
 }
 .faqs{
     color: #f74f58;
-    font-family: sans-serif;
+    font-family: Agency B;
     margin-left:100px ;
 }
 .faqs-heading{
-    font-size: 60px;
+    font-size: 80px;
     text-transform: uppercase;
     font-weight: 900;
     margin-right: 100px;
@@ -40,7 +40,9 @@
 }
 .faqs-que{
     cursor: pointer;
-    font-size: 20px;
+    font-family: Agency B;
+    font-size: 30px;
+    letter-spacing: 1.2px;
     border-radius: 10px;
     border-bottom: 2px solid #f74f58;
     display: flex;
@@ -53,7 +55,9 @@
 
 }
 .faqs-ans{
-  
+    font-family: Agency R;
+    font-size: 18px;
+    letter-spacing: 1.0px;
     padding: 10px 10px 0px 30px
 }
 .faqs-que:hover{

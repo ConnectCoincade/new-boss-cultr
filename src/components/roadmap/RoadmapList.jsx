@@ -103,7 +103,7 @@ const Card = ({ setSelect, item, key}) => {
       onClick = {()=>handleCardClick(item)}
       onMouseEnter={()=>setIsHovering(true)} onMouseLeave={()=>setIsHovering(false)}
       >
-    {/* <Slide > */}
+    
    
     <div  className={`face front face-${item.id} front-${item.id} `}>
     <img className={`card card-${item.id}`} src={item.url} alt='card' />
@@ -121,9 +121,6 @@ const Card = ({ setSelect, item, key}) => {
   /> */}
     </picture>
     </div>
-  
-    {/* </Slide> */}
-
     
     {selectedCard && (
       <Fade direction="right">
@@ -131,8 +128,8 @@ const Card = ({ setSelect, item, key}) => {
          "" :
        ( <div className="details shadow-2xl shadow-red-600 p-5 faq-top-margin">
           
-          <h2 className='text-xl md:text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
-          <p className='text-sm md:text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
+          <h2 className='details-heading text-xl md:text-3xl font-bold py-5 text-cream-600'>{selectedCard.title}</h2>
+          <p className='details-des text-sm md:text-lg text-cream-600' dangerouslySetInnerHTML={{ __html: selectedCard.description }}/>
           
         </div>)
           }
