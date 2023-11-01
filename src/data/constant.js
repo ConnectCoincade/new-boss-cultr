@@ -32,7 +32,7 @@ import cardBack7 from '../assets/3x/Asset7-back.png';
 import cardBackLock from '../assets/3x/Asset8-back-lock.png'
 import twitter from '../assets/twiter.png'
 import discord from '../assets/discord.png';
-import bossManV1 from '../assets/Desktop HD.mp4';
+import bossManV1 from '../assets/Desktop HD 2.mp4';
 
 
 export const mediaDataObj = {
