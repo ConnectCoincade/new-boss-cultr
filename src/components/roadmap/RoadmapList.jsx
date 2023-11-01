@@ -62,7 +62,7 @@ const Card = ({ setSelect, item, key,open, setOpen, selectedCard,setSelectedCard
             console.log("da-1");
             setSelectedCard(null);
               // setTimeout(()=>{  
-                
+                console.log("a")
               // card.style.transform = `translateX(0%)`;
               // card.style.transition = "all 2s ease-out";
               // card.style.display = "block";
