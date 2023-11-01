@@ -2,7 +2,7 @@ import React , {useRef, useState, useEffect} from 'react';
 import { mediaDataObj } from '../../data/constant';
 import './hero.css'
 const Hero = () => {
-  const {title,hero, longVideo} = mediaDataObj;
+  const {title,hero, longVideo,bossManV1} = mediaDataObj;
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
   const [muteMode, setMuteMode] = useState(
@@ -37,7 +37,7 @@ const Hero = () => {
          controls={false}
          className='boss-div'
          >
-      <source  src={longVideo} type="video/mp4" /> 
+      <source  src={bossManV1} type="video/mp4" /> 
      </video>
      </div>   
     </div>

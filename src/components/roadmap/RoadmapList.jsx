@@ -1,5 +1,5 @@
 
-import React ,{useState, useEffect}from "react";
+import React ,{useState, useEffect, useRef}from "react";
 import { mediaDataObj } from '../../data/constant';
 import { cardItems } from "../../data/constant2";
 import './roadmap.css';
@@ -7,11 +7,11 @@ import { Fade } from "react-awesome-reveal";
 
 
 
-const Card = ({ setSelect, item, key}) => {
+const Card = ({ setSelect, item, key,open, setOpen, selectedCard,setSelectedCard}) => {
 
   const { lock, cardBackLock} = mediaDataObj
-  const [selectedCard, setSelectedCard] = useState(null);
-  const [open,setOpen] = useState(false);
+  // const [selectedCard, setSelectedCard] = useState(null);
+ 
   const [isHovering,setIsHovering] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
@@ -28,6 +28,8 @@ const Card = ({ setSelect, item, key}) => {
   }, []);
 
   const handleCardClick = (selectedCard) => {
+    // console.log(selectedCard);
+   
     if(window.innerWidth <= 800 && !open) {
       document.getElementById('faq-section').classList.add("faq-top-margin");
     }
@@ -56,11 +58,27 @@ const Card = ({ setSelect, item, key}) => {
       cardItems.forEach((item, index) => {
         if (index !== selectedIndex) {
           const card = document.getElementById(item.id);
+          if (selectedCard === item) {
+            console.log("da-1");
+            setSelectedCard(null);
+              // setTimeout(()=>{  
+                
+              // card.style.transform = `translateX(0%)`;
+              // card.style.transition = "all 2s ease-out";
+              // card.style.display = "block";
+            // },50);
+            // setOpen(false);
+          } else {
+            console.log("da-2");
+            setSelectedCard(item);
+          }
+
           if (card && !open) {
 
               if(isMobile){
                 card.style.display = "block";
               }
+              console.log("Here 1");
               card.style.transform = `translateX(${translateXValue})`;
               card.style.transition = "all 2s ease-out";
               setTimeout(()=>{  
@@ -69,7 +87,7 @@ const Card = ({ setSelect, item, key}) => {
               setOpen(true);
             
           }else{
-            
+            console.log("Here 2");
             setTimeout(()=>{  
               card.style.transform = `translateX(0%)`;
               card.style.transition = "all 2s ease-out";
@@ -79,18 +97,8 @@ const Card = ({ setSelect, item, key}) => {
           }
         }
       });
-
          !open  ? setSelectedCard(item) : setSelectedCard(null);
-    }else{
-        // cardItems.forEach((item,index)=>{
-        //   if(index === selectedIndex){
-        //     const card = document.getElementById(item.id);
-        //     console.log(card);
-        //     card.style.opacity = `0.5`
-        //   }
-        // })
     }
-
     
   };
 
@@ -146,20 +154,32 @@ const Card = ({ setSelect, item, key}) => {
 export default function RoadmapList({ setSelect }) {
 
     const {table} = mediaDataObj;   
+    const [open,setOpen] = useState(false);
+    const [selectedCard, setSelectedCard] = useState(null);
 
   return (
     <div className="roadmaplist" >
         <h3 className='roadmap-heading text-center'>Roadmap</h3>
         <div className='h-16'></div>
-    <div className='relative'>
+    <div className='relative' onClick={()=>setOpen(!open)} >
 
-     <div className="hidden md:block"> <img className='w-full' src={table} alt="table" /> </div>
+     <div className="hidden md:block" onClick={() => setSelectedCard(null)} > <img className='w-full' src={table} alt="table" /> </div>
       
      <div className='sticky image-card flex justify-between flex-col md:flex-row md:absolute'>
         
         {cardItems.map((item,index) => (
         
-          <Card setSelect={setSelect} item={item} key={item.id} id={index}/>
+          <Card
+          setSelect={setSelect} 
+          item={item} 
+          key={item.id} 
+          id={index} 
+          open={open} 
+          setOpen={setOpen} 
+          selectedCard={selectedCard}
+          setSelectedCard={setSelectedCard}
+          />
+          
          
         ))}
       </div> 

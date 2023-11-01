@@ -32,6 +32,7 @@ import cardBack7 from '../assets/3x/Asset7-back.png';
 import cardBackLock from '../assets/3x/Asset8-back-lock.png'
 import twitter from '../assets/twiter.png'
 import discord from '../assets/discord.png';
+import bossManV1 from '../assets/Desktop HD.mp4';
 
 
 export const mediaDataObj = {
@@ -43,6 +44,7 @@ export const mediaDataObj = {
     BossPictureHover3,
     lock,
     bossManVideo,
+    bossManV1,
     boss1,
     boss2,
     table,
