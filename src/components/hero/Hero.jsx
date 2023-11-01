@@ -26,6 +26,7 @@ const Hero = () => {
     <>
     <div >
       <div className='w-full'>
+        <></>
      <video 
          loop
          ref={videoRef}
