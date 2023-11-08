@@ -108,26 +108,9 @@ const Lore = () => {
           alt="Goonies"
         />
       </Plx>
-      <div
-        style={{
-          position: "fixed",
-          left: 0,
-          top: 0,
-          zIndex: 200,
-          paddingTop: "56%",
-          height: "400vh",
-          width: "100%"
-        }}
-      >
-        <div
-          style={{
-            background: "#000",
-            height: "100%"
-          }}
-        ></div>
-      </div>
+      
 
-    </div>
+    </div>  
    
       
     </>
