@@ -3,7 +3,7 @@ import './lore.css'
 import Plx from "react-plx";
 
 const Lore = () => {
-
+  
   
 
   return (
@@ -106,7 +106,7 @@ const Lore = () => {
           alt="Goonies"
         />
       </Plx>
-      
+
 
     </div>  
    
