@@ -1,26 +1,11 @@
 
+.plx-container {
+  overscroll-behavior: none;
+}
 
-  
-
-  
-
-  
-  /* .scroll-bound {
-    height: 750vh;
-  } */
-  .scroll-bound .content {
-    /* height: 160vh; */
-    /* width: 100%; */
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .scroll-bound video {
-    width: 100%;
-  }
-  #bound-two {
-    height: 100vh;
-  }
+.plx-container {
+  font-family: Arial Black, sans-serif;
+  text-align: center;
+  background: #000;
+  height: 100vh;
+}
