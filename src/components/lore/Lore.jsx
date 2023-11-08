@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
-import { mediaDataObj } from "../../data/constant";
+import React from "react";
 import './lore.css'
 import Plx from "react-plx";
 
@@ -9,7 +8,6 @@ const Lore = () => {
 
   return (
     <>
- 
  <div className='plx-container'>
       <Plx
         parallaxData={[
@@ -39,7 +37,7 @@ const Lore = () => {
           zIndex: 100
         }}
       >
-        <img style={{ width: "100%" }} src="src\assets\lore-plx-img\bosses.png" alt="foreground" />
+        <img style={{ width: "100%" }} src="src\assets\lore-plx-img\bosses-og.png" alt="foreground" />
       </Plx>
 
 
@@ -64,7 +62,7 @@ const Lore = () => {
         ]}
         style={{  
           position: "absolute",
-          left: 0.9,
+          left: 1,
           top: "100vh",
           width: "100%"
         }}
@@ -112,7 +110,6 @@ const Lore = () => {
 
     </div>  
    
-      
     </>
   );
 };

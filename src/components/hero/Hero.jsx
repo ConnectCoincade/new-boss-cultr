@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <>
-    <div >
+    <div>
       <div className='w-full'>
         <></>
      <video 
